@@ -19,8 +19,8 @@ function App() {
   return (
     <Container maxWidth="lg">
       <AppBar className={classes.appBar} position="static" color="inherit">
-        <Typography className={classes.heading} variant="h2" align="center">BeMusic</Typography>
-        <img className={classes.image} src={bemusic} alt="BeMusic" height="60"></img>
+        <img className={classes.image} src={bemusic} alt="BeMusic" height="50"></img>
+        <Typography className={classes.heading} variant="h3">BeMusic</Typography>
       </AppBar>
       <Grow in>
         <Container>

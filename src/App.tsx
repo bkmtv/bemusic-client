@@ -1,10 +1,16 @@
+import { useContext } from "react";
+import Header from './components/Header/Header';
+import { ThemeContext } from "./Theme";
 import './App.css';
-import * as Icon from "react-bootstrap-icons";
 
 function App() {
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <div className="container">
-      <div className="h3 mt-5"><Icon.Collection /> Collections</div>
+    <div className={`App ${theme}`}>
+      <div className="container">
+        <Header />
+      </div>
     </div>
   );
 }

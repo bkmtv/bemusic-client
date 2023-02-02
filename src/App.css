@@ -12,7 +12,7 @@
   --text-secondary-dark: rgb(160, 160, 160);
 
   --bg-primary-light: rgb(244, 244, 244);
-  --bg-primary-dark: rgb(25, 25, 25);
+  --bg-primary-dark: rgb(28, 28, 28);
 
   --bg-secondary-light: rgb(212, 212, 212);
   --bg-secondary-dark: rgb(34, 34, 34);
@@ -23,6 +23,7 @@
   --text-secondary: var(--text-secondary-light);
   --bg-primary: var(--bg-primary-light);
   --bg-secondary: var(--bg-secondary-light);
+  transition: 0.25s;
 }
 
 .dark-theme {
@@ -30,4 +31,5 @@
   --text-secondary: var(--text-secondary-dark);
   --bg-primary: var(--bg-primary-dark);
   --bg-secondary: var(--bg-secondary-dark);
+  transition: 0.25s;
 }

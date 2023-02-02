@@ -2,10 +2,10 @@ import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
 import routes from "../../shared/constants/routes";
 
-export default function Register() {
+export default function Login() {
     return (
-        <Link to={routes.SIGNUP}>
-            <button type="button"><FormattedMessage id="app.header.sign-up" /></button>
+        <Link to={routes.SIGNIN}>
+            <button type="button"><FormattedMessage id="app.header.sign-in" /></button>
         </Link>
     )
 }

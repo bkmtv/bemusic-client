@@ -2,5 +2,12 @@
   "app.header.logo": "Collections",
   "app.header.search": "Search",
   "app.header.sign-in": "Sign In",
-  "app.header.sign-up": "Sign Up"
+  "app.header.sign-up": "Sign Up",
+  "app.auth.sign-in": "Sign In to Collections",
+  "app.auth.sign-in.username": "Username",
+  "app.auth.sign-in.email": "Email",
+  "app.auth.sign-in.password": "Password",
+  "app.auth.sign-in.btn": "Sign In",
+  "app.auth.sign-up": "Create an Account",
+  "app.auth.sign-up.btn": "Submit"
 }

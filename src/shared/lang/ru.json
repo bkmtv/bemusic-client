@@ -2,5 +2,12 @@
   "app.header.logo": "Коллекции",
   "app.header.search": "Поиск",
   "app.header.sign-in": "Вход",
-  "app.header.sign-up": "Регистрация"
+  "app.header.sign-up": "Регистрация",
+  "app.auth.sign-in": "Войти в Коллекции",
+  "app.auth.sign-in.username": "Имя пользователя",
+  "app.auth.sign-in.email": "Почта",
+  "app.auth.sign-in.password": "Пароль",
+  "app.auth.sign-in.btn": "Войти",
+  "app.auth.sign-up": "Создать аккаунт",
+  "app.auth.sign-up.btn": "Отправить"
 }

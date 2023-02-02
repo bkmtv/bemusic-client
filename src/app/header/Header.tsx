@@ -10,10 +10,10 @@ import "./Header.css";
 function Header() {
   return (
     <header className="hstack gap-4">
-      <h3><Icon.Collection /> <FormattedMessage id="app.header.logo" /></h3>
-      <Search />
+      <h3 className="me-3"><Icon.Collection /> <FormattedMessage id="app.header.logo" /></h3>
       <Login />
       <Register />
+      <Search />
       <ToggleLocale />
       <ToggleTheme />
     </header>

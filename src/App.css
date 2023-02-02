@@ -4,16 +4,13 @@
   color: var(--text-primary);
 }
 
-.header__toggle button {
+header button {
   color: var(--text-primary);
   border: none;
   background: none;
 }
 
 :root {
-  --primary-blue: rgb(0, 0, 255);
-  --secondary-blue: rgb(96, 96, 182);
-
   --text-primary-light: black;
   --text-primary-dark: white;
 

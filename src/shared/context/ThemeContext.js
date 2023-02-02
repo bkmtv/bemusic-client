@@ -5,9 +5,8 @@ const ThemeContext = createContext();
 const getTheme = () => {
   const theme = localStorage.getItem("theme");
   if (!theme) {
-    // Default theme is taken as dark-theme
-    localStorage.setItem("theme", "dark-theme");
-    return "dark-theme";
+    localStorage.setItem("theme", "light-theme");
+    return "light-theme";
   } else {
     return theme;
   }
@@ -15,7 +14,6 @@ const getTheme = () => {
 
 const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(getTheme);
-
   function toggleTheme() {
     if (theme === "dark-theme") {
       setTheme("light-theme");
@@ -32,13 +30,7 @@ const ThemeProvider = ({ children }) => {
   }, [theme]);
 
   return (
-    <ThemeContext.Provider
-      value={{
-        theme,
-        setTheme,
-        toggleTheme,
-      }}
-    >
+    <ThemeContext.Provider value={{ theme, setTheme, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );

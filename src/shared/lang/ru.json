@@ -9,5 +9,6 @@
   "app.auth.sign-in.password": "Пароль",
   "app.auth.sign-in.btn": "Войти",
   "app.auth.sign-up": "Создать аккаунт",
-  "app.auth.sign-up.btn": "Отправить"
+  "app.auth.sign-up.btn": "Отправить",
+  "app.auth.signup.ok": "Регистрация прошла успешно"
 }

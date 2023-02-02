@@ -8,6 +8,7 @@
   "app.auth.sign-in.email": "Email",
   "app.auth.sign-in.password": "Password",
   "app.auth.sign-in.btn": "Sign In",
-  "app.auth.sign-up": "Create an Account",
-  "app.auth.sign-up.btn": "Submit"
+  "app.auth.sign-up": "Create an account",
+  "app.auth.sign-up.btn": "Submit",
+  "app.auth.signup.ok": "Registration completed successfully"
 }

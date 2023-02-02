@@ -9,8 +9,8 @@ export default function Signup() {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = async (data) => {
-        await axios.post("http://localhost:5000/api/auth/register", data).then(() => {
-            alert("OK");
+        await axios.post("http://localhost:5000/auth/register", data).then(() => {
+            alert("Registration completed successfully");
             navigate(routes.SIGNIN);
         })
      }
@@ -21,13 +21,13 @@ export default function Signup() {
                 <div className="h3 text-center"><FormattedMessage id="app.auth.sign-up" /></div>
                 <label className="mt-3 mb-1"><FormattedMessage id="app.auth.sign-in.username" /></label>
                 <input
-                    {...register("username", { required: true, maxLength: 20 })}
+                    {...register("username", { required: true, maxLength: 15 })}
                     className="form-control"
                     >
                 </input>
                 <label className="mt-3 mb-1"><FormattedMessage id="app.auth.sign-in.password" /></label>
                 <input 
-                    {...register("password", { required: true, maxLength: 20 })}
+                    {...register("password", { required: true, maxLength: 15 })}
                     className="form-control"
                     >
                 </input>

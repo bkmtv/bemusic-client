@@ -4,12 +4,6 @@
   color: var(--text-primary);
 }
 
-header button {
-  color: var(--text-primary);
-  border: none;
-  background: none;
-}
-
 :root {
   --text-primary-light: black;
   --text-primary-dark: white;

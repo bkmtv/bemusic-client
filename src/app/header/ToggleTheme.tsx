@@ -6,7 +6,7 @@ export default function ToggleLocale() {
     const { theme, toggleTheme } = useContext(ThemeContext);
     return (
         <button onClick={() => toggleTheme()}>
-          {theme === "dark-theme" ? <Icon.BrightnessHigh /> : <Icon.MoonStars />}
+          {theme === "dark-theme" ? <Icon.MoonStars /> : <Icon.BrightnessHigh />}
         </button>
     )
 }

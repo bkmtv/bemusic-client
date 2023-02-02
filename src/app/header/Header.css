@@ -1,0 +1,9 @@
+header button {
+    color: var(--text-primary);
+    border: none;
+    background: none;
+  }
+
+.search input {
+    border-radius: 5px;
+}

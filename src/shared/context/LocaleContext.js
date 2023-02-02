@@ -14,9 +14,14 @@ const getLocale = () => {
   }
 };
 
+const getMessages = () => {
+  const locale = localStorage.getItem("locale");
+  if (locale === "en") {return English} else {return Russian}
+};
+
 const LocaleProvider = ({ children }) => {
   const [locale, setLocale] = useState(getLocale);
-  const [messages, setMessages] = useState(English);
+  const [messages, setMessages] = useState(getMessages);
   function toggleLocale() {
     if (locale === "en") {
       setLocale("ru");

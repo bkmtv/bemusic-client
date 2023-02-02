@@ -1,3 +1,6 @@
 {
-  "app.header.logo": "Коллекции"
+  "app.header.logo": "Коллекции",
+  "app.header.search": "Поиск",
+  "app.header.sign-in": "Вход",
+  "app.header.sign-up": "Регистрация"
 }

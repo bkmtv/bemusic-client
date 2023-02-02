@@ -3,8 +3,8 @@ import * as Icon from "react-bootstrap-icons";
 export default function Search() {
   return (
     <div className="ms-auto">
-      <form role="search">
-          <input type="search" placeholder="Search"/>
+      <form className="d-flex" role="search">
+          <input className="form-control" type="search"/>
           <button type="submit"><Icon.Search /></button>
       </form>
     </div>

@@ -11,7 +11,7 @@ const UserProvider = ({ children }) => {
 
 useEffect(() => {
   const refreshUser = () => {
-    axios.get("http://localhost:5000/auth/user", {
+    axios.get("https://collections-ibkmt.herokuapp.com/auth/user", {
       headers: {token: localStorage.getItem("token")},
     }).then(({data}) => {
       if (data.error) {

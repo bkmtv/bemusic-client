@@ -17,7 +17,7 @@ export default function Login() {
     return (
         <>
         <Link to={routes.USER}>{user.username}</Link>
-        <button onClick={Logout} className="btn"><FormattedMessage id="app.auth.logout" /></button>
+        <button onClick={Logout}><FormattedMessage id="app.auth.logout" /></button>
         </>
     )
 }

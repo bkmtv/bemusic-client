@@ -6,16 +6,13 @@ import { useForm } from "react-hook-form";
 import { UserContext } from "../../shared/context/UserContext";
 import { useContext } from "react";
 
-// https://collections-ibkmt.herokuapp.com/
-// http://localhost:5000/auth/login
-
 export default function Signin() {
     const navigate = useNavigate();
     const { register, handleSubmit } = useForm();
     const { setUser } = useContext(UserContext);
     
     const onSubmit = async (data) => {
-        await axios.post("https://collections-ibkmt.herokuapp.com/auth/login", data).then(({data}) => {
+        await axios.post("http://localhost:5000/auth/login", data).then(({data}) => {
             if (data.error) {
                 alert(data.error);
             } else {
@@ -35,13 +32,13 @@ export default function Signin() {
                 <div className="h3 text-center"><FormattedMessage id="app.auth.sign-in" /></div>
                 <label className="mt-3 mb-1"><FormattedMessage id="app.auth.sign-in.username" /></label>
                 <input
-                    {...register("username", { required: true, maxLength: 15 })}
+                    {...register("username", { required: true, maxLength: 20 })}
                     className="form-control"
                     >
                 </input>
                 <label className="mt-3 mb-1"><FormattedMessage id="app.auth.sign-in.password" /></label>
                 <input 
-                    {...register("password", { required: true, maxLength: 15 })}
+                    {...register("password", { required: true, maxLength: 20 })}
                     className="form-control"
                     >
                 </input>

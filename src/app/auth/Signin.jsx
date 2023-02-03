@@ -6,13 +6,16 @@ import { useForm } from "react-hook-form";
 import { UserContext } from "../../shared/context/UserContext";
 import { useContext } from "react";
 
+// https://collections-ibkmt.herokuapp.com/
+// http://localhost:5000/auth/login
+
 export default function Signin() {
     const navigate = useNavigate();
     const { register, handleSubmit } = useForm();
     const { setUser } = useContext(UserContext);
     
     const onSubmit = async (data) => {
-        await axios.post("http://localhost:5000/auth/login", data).then(({data}) => {
+        await axios.post("https://collections-ibkmt.herokuapp.com/auth/login", data).then(({data}) => {
             if (data.error) {
                 alert(data.error);
             } else {

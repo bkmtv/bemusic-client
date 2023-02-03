@@ -9,7 +9,7 @@ export default function Signup() {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = async (data) => {
-        await axios.post("http://localhost:5000/auth/register", data).then(() => {
+        await axios.post("https://collections-ibkmt.herokuapp.com/auth/register", data).then(() => {
             alert("Registration completed successfully");
             navigate(routes.SIGNIN);
         })

@@ -6,7 +6,7 @@ export default function UsersList() {
 
     useEffect(() => {
       const getUsers = async () => {
-        await axios.get("http://localhost:5000/user/", { 
+        await axios.get("https://collections-ibkmt.herokuapp.com/user/", { 
           headers: {token: localStorage.getItem("token")}
         })
           .then((data) => {

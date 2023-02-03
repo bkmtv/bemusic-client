@@ -10,5 +10,6 @@
   "app.auth.sign-in.btn": "Войти",
   "app.auth.sign-up": "Создать аккаунт",
   "app.auth.sign-up.btn": "Отправить",
-  "app.auth.signup.ok": "Регистрация прошла успешно"
+  "app.auth.signup.ok": "Регистрация прошла успешно",
+  "app.auth.logout": "Выйти"
 }

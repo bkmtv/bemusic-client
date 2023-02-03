@@ -22,7 +22,7 @@ useEffect(() => {
     })
   }
   refreshUser();
-}, [user]);
+}, [setUser]);
 
   return (
     <UserContext.Provider value={{ user, setUser }}>

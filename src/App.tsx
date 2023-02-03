@@ -6,6 +6,7 @@ import { LocaleContext } from "./shared/context/LocaleContext";
 import { IntlProvider } from "react-intl";
 import { BrowserRouter } from "react-router-dom";
 import AppRoutes from "./shared/routes/AppRoutes";
+import { UserProvider } from './shared/context/UserContext';
 
 function App() {
   const { theme } = useContext(ThemeContext);
@@ -14,12 +15,14 @@ function App() {
   return (
     <IntlProvider messages={messages} locale={locale}>
       <BrowserRouter>
-        <div className={`App ${theme}`}>
-          <div className="container-lg p-5">
-            <Header />
-            <AppRoutes />
+        <UserProvider>
+          <div className={`App ${theme}`}>
+            <div className="container-lg p-5">
+              <Header />
+              <AppRoutes />
+            </div>
           </div>
-        </div>
+        </UserProvider>
       </BrowserRouter>
     </IntlProvider>
   );

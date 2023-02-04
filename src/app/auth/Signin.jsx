@@ -5,6 +5,7 @@ import routes from "../../shared/constants/routes";
 import { useForm } from "react-hook-form";
 import { UserContext } from "../../shared/context/UserContext";
 import { useContext } from "react";
+import { URI } from "../../shared/constants/api";
 
 export default function Signin() {
     const navigate = useNavigate();
@@ -12,7 +13,7 @@ export default function Signin() {
     const { setUser } = useContext(UserContext);
     
     const onSubmit = async (data) => {
-        await axios.post("http://localhost:5000/auth/login", data).then(({data}) => {
+        await axios.post(URI + "auth/login", data).then(({data}) => {
             if (data.error) {
                 alert(data.error);
             } else {

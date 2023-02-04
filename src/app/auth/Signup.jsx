@@ -3,13 +3,14 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import routes from "../../shared/constants/routes";
 import { useForm } from "react-hook-form";
+import { URI } from "../../shared/constants/api";
 
 export default function Signup() {
     const navigate = useNavigate();
     const { register, handleSubmit } = useForm();
 
     const onSubmit = async (data) => {
-        await axios.post("http://localhost:5000/auth/register", data).then(() => {
+        await axios.post(URI + "auth/register", data).then(() => {
             alert("Registration completed successfully");
             navigate(routes.SIGNIN);
         })

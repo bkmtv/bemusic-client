@@ -3,12 +3,13 @@ import { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import "./UsersList.css";
 import * as Icon from "react-bootstrap-icons";
+import { URI } from "../../shared/constants/api";
 
 export default function UsersList() {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-      axios.get("http://localhost:5000/user/")
+      axios.get(URI +"user")
         .then((response) => {
             setUsers(response.data);
           }
@@ -16,7 +17,7 @@ export default function UsersList() {
       }, [setUsers]);
 
       const deleteUser = (id) => {
-        axios.delete(`http://localhost:5000/user/${id}`).then((response) => {
+        axios.delete(URI + "user/" + id).then((response) => {
           setUsers(response.data);
         })
       }

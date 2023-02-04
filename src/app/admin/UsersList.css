@@ -1,0 +1,10 @@
+#custom {
+    color: var(--text-primary);
+}
+
+button {
+    color: var(--text-primary);
+    border: none;
+    background: none;
+    text-decoration: none;
+}

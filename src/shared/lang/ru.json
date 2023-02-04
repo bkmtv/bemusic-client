@@ -11,5 +11,12 @@
   "app.auth.sign-up": "Создать аккаунт",
   "app.auth.sign-up.btn": "Отправить",
   "app.auth.signup.ok": "Регистрация прошла успешно",
-  "app.auth.logout": "Выйти"
+  "app.auth.logout": "Выйти",
+  "app.user.hello": "Здравствуйте",
+  "app.user.users": "Список пользователей",
+  "app.user.users.name": "Имя пользователя",
+  "app.user.users.regdate": "Дата регистрации",
+  "app.user.users.role": "Роль",
+  "app.user.users.action": "Действие",
+  "app.home.welcome": "Добро пожаловать в Коллекции"
 }

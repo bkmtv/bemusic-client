@@ -11,5 +11,12 @@
   "app.auth.sign-up": "Create an account",
   "app.auth.sign-up.btn": "Submit",
   "app.auth.signup.ok": "Registration completed successfully",
-  "app.auth.logout": "Logout"
+  "app.auth.logout": "Logout",
+  "app.user.hello": "Hello",
+  "app.user.users": "List of users",
+  "app.user.users.name": "Username",
+  "app.user.users.regdate": "Registration date",
+  "app.user.users.role": "Role",
+  "app.user.users.action": "Action",
+  "app.home.welcome": "Welcome to Collections"
 }

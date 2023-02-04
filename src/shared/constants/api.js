@@ -1,2 +1,1 @@
-export const URI = "http://localhost:5000/";
-//https://collections-ibkmt.herokuapp.com/
+export const URI = process.env.REACT_APP_URI;

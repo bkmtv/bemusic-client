@@ -9,7 +9,7 @@ export default function UsersList() {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-      axios.get(URI +"user")
+      axios.get(URI +"profile")
         .then((response) => {
             setUsers(response.data);
           }
@@ -17,7 +17,7 @@ export default function UsersList() {
       }, [setUsers]);
 
       const deleteUser = (id) => {
-        axios.delete(URI + "user/" + id).then((response) => {
+        axios.delete(URI + "profile/" + id).then((response) => {
           setUsers(response.data);
         })
       }
@@ -25,7 +25,7 @@ export default function UsersList() {
       return (
         <div>
           <h5><FormattedMessage id="app.user.users" /></h5>
-          <table className="table" id="custom">
+          <table className="table" id="custom-table">
             <thead>
               <tr>
                 <th scope="col">ID</th>

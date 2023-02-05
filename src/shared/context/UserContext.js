@@ -13,9 +13,9 @@ const UserProvider = ({ children }) => {
         headers: {token: localStorage.getItem("token")},
       }).then(({data}) => {
         if (data.error) {
-          setUser({isLoggedIn: false, username: "" })
+          setUser({isLoggedIn: false, username: "", id: "" })
         } else {
-          setUser({isLoggedIn: true, username: data.username });
+          setUser({isLoggedIn: true, username: data.username, id: data.id });
         }
       })
     }

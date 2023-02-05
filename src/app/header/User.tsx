@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { FormattedMessage } from "react-intl";
 import { Link, useNavigate } from "react-router-dom";
-import routes from "../../shared/constants/routes";
 import { UserContext } from "../../shared/context/UserContext";
 
 export default function Login() {
@@ -11,12 +10,12 @@ export default function Login() {
     function Logout() {
         localStorage.removeItem("token");
         setUser({isLoggedIn: false, username: ""});
-        navigate(routes.HOME);
+        navigate("/");
     }
 
     return (
         <>
-        <Link to={routes.USER}>{user.username}</Link>
+        <Link to={`/profile/${user.id}`}>{user.username}</Link>
         <button onClick={Logout}><FormattedMessage id="app.auth.logout" /></button>
         </>
     )

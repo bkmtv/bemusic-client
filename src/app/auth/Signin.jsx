@@ -1,7 +1,6 @@
 import { FormattedMessage } from "react-intl";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import routes from "../../shared/constants/routes";
 import { useForm } from "react-hook-form";
 import { UserContext } from "../../shared/context/UserContext";
 import { useContext } from "react";
@@ -22,7 +21,7 @@ export default function Signin() {
                 username: data.username
               });
             localStorage.setItem("token", data.token);
-            navigate(routes.HOME); 
+            navigate("/"); 
             }
         })
      }

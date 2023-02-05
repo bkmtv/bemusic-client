@@ -8,7 +8,6 @@ import User from "./User";
 import * as Icon from "react-bootstrap-icons";
 import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
-import routes from "../../shared/constants/routes";
 import { useContext } from "react";
 import { UserContext } from "../../shared/context/UserContext";
 
@@ -17,7 +16,7 @@ function Header() {
 
   return (
     <header className="hstack gap-4">
-      <Link to={routes.HOME}>
+      <Link to={"/"}>
         <h3 className="me-3"><Icon.Collection /> <FormattedMessage id="app.header.logo" /></h3>
       </Link>
       {!user.isLoggedIn ?

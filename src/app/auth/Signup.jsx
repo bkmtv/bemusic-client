@@ -1,7 +1,6 @@
 import { FormattedMessage } from "react-intl";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import routes from "../../shared/constants/routes";
 import { useForm } from "react-hook-form";
 import { URI } from "../../shared/constants/api";
 
@@ -12,7 +11,7 @@ export default function Signup() {
     const onSubmit = async (data) => {
         await axios.post(URI + "auth/register", data).then(() => {
             alert("Registration completed successfully");
-            navigate(routes.SIGNIN);
+            navigate("/signin");
         })
      }
 

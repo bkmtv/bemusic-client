@@ -6,6 +6,8 @@ import { useParams, Link } from "react-router-dom";
 import { URI } from "../../shared/constants/api";
 import UsersList from "../admin/UsersList";
 import * as Icon from "react-bootstrap-icons";
+import Footer from "./Footer";
+import png from "../../assets/img.png";
 
 export default function Profile() {
     const { id } = useParams();
@@ -24,42 +26,54 @@ export default function Profile() {
     return (
         <>
         <div className="h5 pt-4"><FormattedMessage id="app.user.hello" /> {userObject.username}</div>
-        <button className="btn btn-primary mb-3">Create a collection</button>
+        <Link to={"/profile/createcollection"}>
+          <button className="btn btn-success my-3">Create a collection</button>
+        </Link>
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
         {userCollections.map((collection, key) => (
-          <div className="col">
-          <div className="card" id="card" key={key}>
-            <div className="card-body">
+          <div className="col" key={key}>
+          <div className="card" id="card">
+          <img src={png} className="card-img" alt="img" />
+            <div className="card-img-overlay">
               <h5 className="card-title">
                 {collection.title} <span className="badge bg-secondary mx-1" id="small">12</span>
                 </h5>
               <p className="card-text">{collection.topic}</p>
-              <p className="card-text">{collection.description}</p>
+              <p className="card-text">{collection.description.slice(0, 60)}</p>
               <Link to={"/"} className="stretched-link"></Link>
             </div>
           </div>
           </div>
           ))}
         </div>
-
       {userObject.isAdmin ? 
         <div className="mt-5">
-          <div class="accordion" id="accordionExample">
-            <div class="accordion-item bg-transparent">
-            <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          <div className="accordion" id="accordionExample">
+            <div className="accordion-item bg-transparent">
+            <h2 className="accordion-header" id="headingOne">
+            <button className="accordion-button collapsed" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#collapseOne"
+                    aria-expanded="false" 
+                    aria-controls="collapseOne">
               <Icon.PersonFillGear />&emsp;<FormattedMessage id="app.user.users" />
             </button>
             </h2>
-              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
+              <div id="collapseOne" 
+                  className="accordion-collapse collapse" 
+                  aria-labelledby="headingOne" 
+                  data-bs-parent="#accordionExample">
+              <div className="accordion-body">
                 <UsersList />
               </div>
             </div>
             </div>
           </div>
         </div>
-        : <></>}
+        : <></>
+        }
+        <Footer />
         </>
     )
 }

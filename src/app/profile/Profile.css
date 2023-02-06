@@ -1,0 +1,9 @@
+#card {
+    height: 12rem;
+    color: var(--text-primary);
+    background: var(--bg-secondary);
+}
+
+#small {
+    font-size: 12px;
+}

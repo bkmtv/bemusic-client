@@ -1,6 +1,5 @@
 {
   "app.header.logo": "Коллекции",
-  "app.header.search": "Поиск",
   "app.header.sign-in": "Вход",
   "app.header.sign-up": "Регистрация",
   "app.auth.sign-in": "Войти в Коллекции",
@@ -10,13 +9,16 @@
   "app.auth.sign-in.btn": "Войти",
   "app.auth.sign-up": "Создать аккаунт",
   "app.auth.sign-up.btn": "Отправить",
-  "app.auth.signup.ok": "Регистрация прошла успешно",
   "app.auth.logout": "Выйти",
-  "app.user.hello": "Здравствуйте",
-  "app.user.users": "Список пользователей",
+  "app.user.hello": "Коллекции пользователя",
+  "app.user.users": "Управление пользователями",
   "app.user.users.name": "Имя пользователя",
   "app.user.users.regdate": "Дата регистрации",
   "app.user.users.role": "Роль",
   "app.user.users.action": "Действие",
-  "app.home.welcome": "Добро пожаловать в Коллекции"
+  "app.home.welcome": "Добро пожаловать в Коллекции",
+  "app.profile.col.title": "Заголовок",
+  "app.profile.col.description": "Описание",
+  "app.profile.col.topic": "Тема",
+  "app.profile.col.action": "Действие"
 }

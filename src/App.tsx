@@ -17,7 +17,7 @@ function App() {
       <BrowserRouter>
         <UserProvider>
           <div className={`App ${theme}`}>
-            <div className="container-lg p-5">
+            <div className="container pt-5">
               <Header />
               <AppRoutes />
             </div>

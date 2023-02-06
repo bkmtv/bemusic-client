@@ -24,7 +24,6 @@ export default function UsersList() {
     
       return (
         <div>
-          <h5><FormattedMessage id="app.user.users" /></h5>
           <table className="table" id="custom-table">
             <thead>
               <tr>

@@ -17,11 +17,12 @@ export default function Signin() {
                 alert(data.error);
             } else {
                setUser({
+                id: data.id,
                 isLoggedIn: true,
                 username: data.username
               });
             localStorage.setItem("token", data.token);
-            navigate("/"); 
+            navigate("/");
             }
         })
      }

@@ -1,6 +1,5 @@
 {
   "app.header.logo": "Collections",
-  "app.header.search": "Search",
   "app.header.sign-in": "Sign In",
   "app.header.sign-up": "Sign Up",
   "app.auth.sign-in": "Sign In to Collections",
@@ -10,13 +9,16 @@
   "app.auth.sign-in.btn": "Sign In",
   "app.auth.sign-up": "Create an account",
   "app.auth.sign-up.btn": "Submit",
-  "app.auth.signup.ok": "Registration completed successfully",
   "app.auth.logout": "Logout",
-  "app.user.hello": "Hello",
-  "app.user.users": "List of users",
+  "app.user.hello": "Collections of",
+  "app.user.users": "User management",
   "app.user.users.name": "Username",
   "app.user.users.regdate": "Registration date",
   "app.user.users.role": "Role",
   "app.user.users.action": "Action",
-  "app.home.welcome": "Welcome to Collections"
+  "app.home.welcome": "Welcome to Collections",
+  "app.profile.col.title": "Title",
+  "app.profile.col.description": "Description",
+  "app.profile.col.topic": "Topic",
+  "app.profile.col.action": "Action"
 }

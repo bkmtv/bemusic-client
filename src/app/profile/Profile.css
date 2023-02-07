@@ -23,3 +23,8 @@
     height: 8rem;
     margin-bottom: 3rem;
 }
+
+#acc-header {
+    color: var(--text-primary);
+    background-color: var(--bg-secondary);
+}

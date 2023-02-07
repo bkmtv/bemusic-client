@@ -4,6 +4,7 @@ import { FormattedMessage } from "react-intl";
 import "./UsersList.css";
 import * as Icon from "react-bootstrap-icons";
 import { URI } from "../../shared/constants/api";
+import { Link } from "react-router-dom";
 
 export default function UsersList() {
     const [users, setUsers] = useState([]);
@@ -38,9 +39,13 @@ export default function UsersList() {
               {users.map((user, key) => (
               <tr key={key}>
                 <th scope="row">{user.id}</th>
-                <td>{user.username}</td>
+                <td><Link to={`/profile/${user.id}`}>{user.username}</Link></td>
                 <td>{user.regDate}</td>
-                <td>{user.isAdmin ? "Admin" : "User"}</td>
+                <td>
+                  { user.isAdmin ? 
+                <FormattedMessage id="app.user.users.admin" /> :
+                <FormattedMessage id="app.user.users.user" /> }
+                </td>
                 <td><button onClick={() => {deleteUser(user.id)}}><Icon.Trash /></button></td>
               </tr>
               ))}

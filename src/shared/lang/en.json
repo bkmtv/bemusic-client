@@ -16,9 +16,20 @@
   "app.user.users.regdate": "Registration date",
   "app.user.users.role": "Role",
   "app.user.users.action": "Action",
+  "app.user.users.admin": "Admin",
+  "app.user.users.user": "User",
   "app.home.welcome": "Welcome to Collections",
   "app.profile.col.title": "Title",
   "app.profile.col.description": "Description",
   "app.profile.col.topic": "Topic",
-  "app.profile.col.action": "Action"
+  "app.profile.col.action": "Action",
+  "app.profile.createbtn": "Create a collection",
+  "app.profile.createclc": "Create a new collection",
+  "app.profile.createclc.title": "Title",
+  "app.profile.createclc.desc": "Description",
+  "app.profile.createclc.topic": "Topic",
+  "app.profile.createclc.img": "Image",
+  "app.profile.createclc.media": "Media",
+  "app.profile.createclc.people": "People",
+  "app.profile.createclc.things": "Things"
 }

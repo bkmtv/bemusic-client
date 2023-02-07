@@ -27,7 +27,9 @@ export default function Profile() {
         <>
         <div className="h5 pt-4"><FormattedMessage id="app.user.hello" /> {userObject.username}</div>
         <Link to={"/profile/createcollection"}>
-          <button className="btn btn-success my-3">Create a collection</button>
+          <button className="btn btn-success my-3">
+            <Icon.FolderPlus />&ensp;<FormattedMessage id="app.profile.createbtn" />
+          </button>
         </Link>
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
         {userCollections.map((collection, key) => (
@@ -51,7 +53,7 @@ export default function Profile() {
           <div className="accordion" id="accordionExample">
             <div className="accordion-item bg-transparent">
             <h2 className="accordion-header" id="headingOne">
-            <button className="accordion-button collapsed" 
+            <button className="accordion-button collapsed" id="acc-header"
                     type="button" 
                     data-bs-toggle="collapse" 
                     data-bs-target="#collapseOne"

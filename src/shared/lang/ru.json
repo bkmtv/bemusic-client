@@ -16,9 +16,20 @@
   "app.user.users.regdate": "Дата регистрации",
   "app.user.users.role": "Роль",
   "app.user.users.action": "Действие",
+  "app.user.users.admin": "Администратор",
+  "app.user.users.user": "Пользователь",
   "app.home.welcome": "Добро пожаловать в Коллекции",
   "app.profile.col.title": "Заголовок",
   "app.profile.col.description": "Описание",
   "app.profile.col.topic": "Тема",
-  "app.profile.col.action": "Действие"
+  "app.profile.col.action": "Действие",
+  "app.profile.createbtn": "Создать коллекцию",
+  "app.profile.createclc": "Создать новую коллекцию",
+  "app.profile.createclc.title": "Название",
+  "app.profile.createclc.desc": "Описание",
+  "app.profile.createclc.topic": "Тема",
+  "app.profile.createclc.img": "Изображение",
+  "app.profile.createclc.media": "Медиа",
+  "app.profile.createclc.people": "Люди",
+  "app.profile.createclc.things": "Вещи"
 }

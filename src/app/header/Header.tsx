@@ -15,19 +15,29 @@ function Header() {
   const { user } = useContext(UserContext);
 
   return (
-    <header className="hstack gap-4">
-      <Link to={"/"}>
-        <h3 className="me-3"><Icon.Collection /> <FormattedMessage id="app.header.logo" /></h3>
-      </Link>
-      {!user.isLoggedIn ?
-      <><Login />
-      <Register /></> :
-      <User />
-      }
-      <Search />
-      <ToggleLocale />
-      <ToggleTheme />
-    </header>
+    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <div className="container-fluid">
+        <Link to={"/"}>
+          <h3 className="mx-2"><Icon.Collection /> <FormattedMessage id="app.header.logo" /></h3>
+        </Link>
+        <button
+          className="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          {!user.isLoggedIn ?
+          <><Login />
+          <Register /></> :
+          <User />
+          }
+          <Search />
+          <ToggleLocale />
+          <ToggleTheme />
+        </div>
+      </div>
+    </nav>
   )
 }
 

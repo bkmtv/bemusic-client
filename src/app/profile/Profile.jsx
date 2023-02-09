@@ -6,7 +6,6 @@ import { useParams, Link } from "react-router-dom";
 import { URI } from "../../shared/constants/api";
 import UsersList from "../admin/UsersList";
 import * as Icon from "react-bootstrap-icons";
-import Footer from "./Footer";
 
 export default function Profile() {
     const { id } = useParams();
@@ -43,7 +42,7 @@ export default function Profile() {
                 </h5>
               <p className="card-text">{collection.topic}</p>
               <p className="card-text">{collection.description.slice(0, 60)}</p>
-              <Link to={"/"} className="stretched-link"></Link>
+              <Link to={`/profile/collection/${collection.id}`} className="stretched-link"></Link>
             </div>
           </div>
           </div>
@@ -76,7 +75,6 @@ export default function Profile() {
         </div>
         : <></>
         }
-        <Footer />
         </>
     )
 }

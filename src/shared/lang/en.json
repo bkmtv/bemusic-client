@@ -31,5 +31,7 @@
   "app.profile.createclc.img": "Image",
   "app.profile.createclc.media": "Media",
   "app.profile.createclc.people": "People",
-  "app.profile.createclc.things": "Things"
+  "app.profile.createclc.things": "Things",
+  "app.profile.collection.title": "Collection",
+  "app.profile.collection.addItem": "Add new item"
 }

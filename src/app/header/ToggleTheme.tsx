@@ -5,7 +5,7 @@ import * as Icon from "react-bootstrap-icons";
 export default function ToggleLocale() {
     const { theme, toggleTheme } = useContext(ThemeContext);
     return (
-        <button onClick={() => toggleTheme()}>
+        <button className="px-3" onClick={() => toggleTheme()}>
           {theme === "dark-theme" ? <Icon.MoonStars /> : <Icon.BrightnessHigh />}
         </button>
     )

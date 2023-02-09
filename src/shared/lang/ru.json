@@ -31,5 +31,7 @@
   "app.profile.createclc.img": "Изображение",
   "app.profile.createclc.media": "Медиа",
   "app.profile.createclc.people": "Люди",
-  "app.profile.createclc.things": "Вещи"
+  "app.profile.createclc.things": "Вещи",
+  "app.profile.collection.title": "Коллекция",
+  "app.profile.collection.addItem": "Добавить новый элемент"
 }

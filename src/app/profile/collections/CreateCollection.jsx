@@ -1,12 +1,17 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { storage } from "../../../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { URI } from "../../../shared/constants/api";
 import { FormattedMessage } from "react-intl";
 import { v4 } from "uuid";
+import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../../shared/context/UserContext";
 
 const Form = () => {
+  const navigate = useNavigate();
+  const { user } = useContext(UserContext);
+
   const [formData, setFormData] = useState({
     title: "",
     description: "",
@@ -60,16 +65,18 @@ const Form = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.post(URI + "collection", formData, {
+      await axios.post(URI + "collection", formData, {
         headers: { token: localStorage.getItem("token") },
       });
-      console.log("Success:", response.data);
+      navigate(`/profile/${user.id}`);
     } catch (error) {
       console.error("Error:", error);
     }
   }
 
   return (
+    <>
+    <h4 className="mt-5"><FormattedMessage id="app.profile.createclc" /></h4>
     <form onSubmit={handleSubmit}>
       <label className="mt-3 mb-1"><FormattedMessage id="app.profile.createclc.title" /></label>
       <input
@@ -98,6 +105,7 @@ const Form = () => {
         <FormattedMessage id="app.auth.sign-up.btn" />
         </button>
     </form>
+    </>
   );
 };
 

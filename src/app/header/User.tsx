@@ -15,8 +15,10 @@ export default function Login() {
 
     return (
         <>
+        <div className="px-3">
         <Link to={`/profile/${user.id}`}>{user.username}</Link>
-        <button onClick={Logout}><FormattedMessage id="app.auth.logout" /></button>
+        <button className="px-3" onClick={Logout}><FormattedMessage id="app.auth.logout" /></button>
+        </div>
         </>
     )
 }

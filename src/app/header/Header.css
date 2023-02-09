@@ -1,10 +1,10 @@
-header button, header a {
+nav button, nav a {
     color: var(--text-primary);
     border: none;
     background: none;
     text-decoration: none;
   }
 
-  header a:hover {
+  nav a:hover {
     color: var(--text-secondary);;
   }

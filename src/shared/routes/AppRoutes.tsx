@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Signin from "../../app/auth/Signin";
 import Signup from "../../app/auth/Signup";
 import Home from "../../app/home/Home";
-import CreateCollection from "../../app/profile/CreateCollection";
+import CreateCollection from "../../app/profile/createcollection/CreateCollection";
 import Profile from "../../app/profile/Profile";
 
 export default function AppRoutes() {

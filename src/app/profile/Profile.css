@@ -4,10 +4,12 @@
     color: var(--text-primary);
     background: var(--bg-secondary);
 }
+
 #card:hover {
     transition: 0.3s;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
 #card img {
     opacity: 0.15;
     object-fit: cover;
@@ -17,11 +19,6 @@
 
 #small {
     font-size: 12px;
-}
-
-#descriprtion {
-    height: 8rem;
-    margin-bottom: 3rem;
 }
 
 #acc-header {

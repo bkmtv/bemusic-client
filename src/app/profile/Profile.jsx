@@ -7,7 +7,6 @@ import { URI } from "../../shared/constants/api";
 import UsersList from "../admin/UsersList";
 import * as Icon from "react-bootstrap-icons";
 import Footer from "./Footer";
-import png from "../../assets/img.png";
 
 export default function Profile() {
     const { id } = useParams();
@@ -23,6 +22,8 @@ export default function Profile() {
         })
     }, [id]);
 
+    function hideImg() {document.getElementById("hideImg").style.display = "none";}
+
     return (
         <>
         <div className="h5 pt-4"><FormattedMessage id="app.user.hello" /> {userObject.username}</div>
@@ -35,7 +36,7 @@ export default function Profile() {
         {userCollections.map((collection, key) => (
           <div className="col" key={key}>
           <div className="card" id="card">
-          <img src={png} className="card-img" alt="img" />
+          <img src={collection.image} className="card-img" alt="" id="hideImg" onError={hideImg} />
             <div className="card-img-overlay">
               <h5 className="card-title">
                 {collection.title} <span className="badge bg-secondary mx-1" id="small">12</span>

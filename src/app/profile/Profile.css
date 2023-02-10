@@ -3,6 +3,7 @@
     max-height: 13rem;
     color: var(--text-primary);
     background: var(--bg-secondary);
+    transition: 0.3s;
 }
 
 #card:hover {

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { URI } from "../../shared/constants/api";
+import "./Sign.css";
 
 export default function Signup() {
     const navigate = useNavigate();
@@ -16,7 +17,7 @@ export default function Signup() {
      }
 
     return (
-        <main className="w-25 m-auto mt-5">
+        <main className="form-signin w-100 m-auto">
             <form className="pt-5" onSubmit={handleSubmit(onSubmit)}>
                 <div className="h3 text-center"><FormattedMessage id="app.auth.sign-up" /></div>
                 <label className="mt-3 mb-1"><FormattedMessage id="app.auth.sign-in.username" /></label>

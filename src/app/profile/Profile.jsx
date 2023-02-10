@@ -41,7 +41,7 @@ export default function Profile() {
                 {collection.title} <span className="badge bg-secondary mx-1" id="small">12</span>
                 </h5>
               <p className="card-text">{collection.topic}</p>
-              <p className="card-text">{collection.description.slice(0, 60)}</p>
+              <p className="card-text">{collection.description.slice(0, 55)}</p>
               <Link to={`/profile/collection/${collection.id}`} className="stretched-link"></Link>
             </div>
           </div>

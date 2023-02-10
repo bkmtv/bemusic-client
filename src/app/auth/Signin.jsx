@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { UserContext } from "../../shared/context/UserContext";
 import { useContext } from "react";
 import { URI } from "../../shared/constants/api";
+import "./Sign.css";
 
 export default function Signin() {
     const navigate = useNavigate();
@@ -28,7 +29,7 @@ export default function Signin() {
      }
 
     return (
-        <main className="w-25 m-auto mt-5">
+        <main className="form-signin w-100 m-auto">
             <form className="pt-5" onSubmit={handleSubmit(onSubmit)}>
                 <div className="h3 text-center"><FormattedMessage id="app.auth.sign-in" /></div>
                 <label className="mt-3 mb-1"><FormattedMessage id="app.auth.sign-in.username" /></label>

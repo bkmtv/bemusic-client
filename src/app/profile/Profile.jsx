@@ -31,7 +31,7 @@ export default function Profile() {
             <Icon.FolderPlus />&ensp;<FormattedMessage id="app.profile.createbtn" />
           </button>
         </Link>
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+        <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
         {userCollections.map((collection, key) => (
           <div className="col" key={key}>
           <div className="card" id="card">

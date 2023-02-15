@@ -10,7 +10,7 @@ export default function UsersList() {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-      axios.get(URI +"profile")
+      axios.get(URI + "profile")
         .then((response) => {
             setUsers(response.data);
           }

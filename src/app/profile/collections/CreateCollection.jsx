@@ -28,7 +28,6 @@ const Form = () => {
     uploadTask.on('state_changed', 
       (snapshot) => {
         const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-        console.log('Upload is ' + progress + '% done');
         setLoading(progress);
       }, 
       (error) => {
@@ -65,12 +64,13 @@ const Form = () => {
 
   return (
     <>
-    <h4 className="mt-5"><FormattedMessage id="app.profile.createclc" /></h4>
+    <h4 className="mt-4"><FormattedMessage id="app.profile.createclc" /></h4>
     <form onSubmit={handleSubmit}>
       <label className="mt-3 mb-1"><FormattedMessage id="app.profile.createclc.title" /></label>
       <input
         type="text"
         name="title"
+        maxLength="35"
         value={formData.title}
         onChange={handleChange}
         className="form-control"

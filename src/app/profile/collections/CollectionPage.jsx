@@ -29,8 +29,8 @@ export default function Collection() {
     }
 
     return (
-        <div className="my-5">
-            <h4><FormattedMessage id="app.profile.collection.title" /> {collectionObj.title}</h4>
+        <div className="my-4">
+            <h4>{collectionObj.title}</h4>
             <p>{collectionObj.description}</p>
 
             <div className="w-50">

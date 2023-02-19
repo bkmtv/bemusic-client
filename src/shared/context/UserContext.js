@@ -5,7 +5,7 @@ import { URI } from '../constants/api';
 const UserContext = createContext();
 
 const UserProvider = ({ children }) => {
-  const [user, setUser] = useState({ isLoggedIn: false, username: ""});
+  const [user, setUser] = useState({});
 
   useEffect(() => {
     const refreshUser = () => {
@@ -13,9 +13,9 @@ const UserProvider = ({ children }) => {
         headers: {token: localStorage.getItem("token")},
       }).then(({data}) => {
         if (data.error) {
-          setUser({isLoggedIn: false, username: "", id: "" })
+          setUser({isLoggedIn: false, ...data })
         } else {
-          setUser({isLoggedIn: true, username: data.username, id: data.id });
+          setUser({isLoggedIn: true, ...data });
         }
       })
     }

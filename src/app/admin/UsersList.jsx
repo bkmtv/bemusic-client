@@ -1,12 +1,14 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import "./UsersList.css";
 import * as Icon from "react-bootstrap-icons";
 import { URI } from "../../shared/constants/api";
 import { Link } from "react-router-dom";
+import { UserContext } from "../../shared/context/UserContext";
 
 export default function UsersList() {
+    const { user } = useContext(UserContext);
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
@@ -24,7 +26,10 @@ export default function UsersList() {
       }
     
       return (
+      <>
+      {user.isAdmin ?
         <div>
+          <h5 className="my-4"><Icon.PersonFillGear />&emsp;<FormattedMessage id="app.user.users" /></h5>
           <table className="table" id="custom-table">
             <thead>
               <tr>
@@ -52,5 +57,10 @@ export default function UsersList() {
             </tbody>
           </table>
         </div>
+        : <>
+          <p className="my-4"><FormattedMessage id="app.profile.admin-page" /></p>
+        </> 
+        }
+        </>
       )
   }

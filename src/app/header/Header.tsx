@@ -16,9 +16,11 @@ function Header() {
 
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
+      <div className="container-fluid p-0">
         <Link to={"/"}>
-          <h3><Icon.Collection /> <FormattedMessage id="app.header.logo" /></h3>
+        <div className="header__logo">
+          <Icon.Collection /> <FormattedMessage id="app.header.logo" />
+        </div>
         </Link>
         <button
           className="navbar-toggler" type="button" data-bs-toggle="collapse"

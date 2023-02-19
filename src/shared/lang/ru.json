@@ -19,6 +19,7 @@
   "app.user.users.admin": "Администратор",
   "app.user.users.user": "Пользователь",
   "app.home.welcome": "Добро пожаловать в Коллекции",
+  "app.profile.admin-page": "Упс... Только администраторы могут видеть эту страницу.",
   "app.profile.col.title": "Заголовок",
   "app.profile.col.description": "Описание",
   "app.profile.col.topic": "Тема",

@@ -19,6 +19,7 @@
   "app.user.users.admin": "Admin",
   "app.user.users.user": "User",
   "app.home.welcome": "Welcome to Collections",
+  "app.profile.admin-page": "Oops... Only administrators can see this page.",
   "app.profile.col.title": "Title",
   "app.profile.col.description": "Description",
   "app.profile.col.topic": "Topic",

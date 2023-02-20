@@ -12,3 +12,10 @@ nav a:hover {
   font-weight: 500;
   margin: 0 30px 5px 0;
 }
+.nav__icon {
+  color: var(--text-primary);
+  font-size: 26px;
+}
+.navbar-toggler {
+  border: none !important;
+}

@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { storage } from "../../../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
@@ -6,12 +6,10 @@ import { URI } from "../../../shared/constants/api";
 import { FormattedMessage } from "react-intl";
 import { v4 } from "uuid";
 import { useNavigate } from "react-router-dom";
-import { UserContext } from "../../../shared/context/UserContext";
+import "./Collections.css";
 
 const Form = () => {
   const navigate = useNavigate();
-  const { user } = useContext(UserContext);
-
   const [formData, setFormData] = useState({
     title: "",
     description: "",
@@ -56,15 +54,15 @@ const Form = () => {
       await axios.post(URI + "collection", formData, {
         headers: { token: localStorage.getItem("token") },
       });
-      navigate(`/profile/${user.id}`);
+      navigate(-1);
     } catch (error) {
       console.error("Error:", error);
     }
   }
 
   return (
-    <>
-    <h4 className="mt-4"><FormattedMessage id="app.profile.createclc" /></h4>
+    <div className="form m-auto">
+    <h4 className="mt-4 text-center"><FormattedMessage id="app.profile.createclc" /></h4>
     <form onSubmit={handleSubmit}>
       <label className="mt-3 mb-1"><FormattedMessage id="app.profile.createclc.title" /></label>
       <input
@@ -83,18 +81,20 @@ const Form = () => {
         className="form-control"
       />
       <label className="mt-3 mb-1"><FormattedMessage id="app.profile.createclc.topic" /></label>
-      <select className="form-select w-50" name="topic" value={formData.topic} onChange={handleChange}>
+      <select className="form-select" name="topic" value={formData.topic} onChange={handleChange}>
         <option value="Media"><FormattedMessage id="app.profile.createclc.media" /></option>
         <option value="People"><FormattedMessage id="app.profile.createclc.people" /></option>
         <option value="Things"><FormattedMessage id="app.profile.createclc.things" /></option>
       </select>
       <label name="image" className="mt-3 mb-1"><FormattedMessage id="app.profile.createclc.img" /></label><br />
       <input type="file"  onChange={(e) => setFile(e.target.files[0])} /><br />
-      <button disabled={loading !== null && loading < 100} className="btn btn-success mt-4" type="submit">
+      <button disabled={loading !== null && loading < 100} className="btn btn-primary mt-4 w-100" type="submit">
+        {loading !== null && loading < 100 &&
+          <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>}&ensp;
         <FormattedMessage id="app.auth.sign-up.btn" />
         </button>
     </form>
-    </>
+    </div>
   );
 };
 

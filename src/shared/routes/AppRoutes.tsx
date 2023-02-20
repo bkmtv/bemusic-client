@@ -5,6 +5,7 @@ import Signup from "../../app/auth/Signup";
 import Home from "../../app/home/Home";
 import CollectionPage from "../../app/profile/collections/CollectionPage";
 import CreateCollection from "../../app/profile/collections/CreateCollection";
+import AddItem from "../../app/profile/items/AddItem";
 import ItemPage from "../../app/profile/items/ItemPage";
 import Profile from "../../app/profile/Profile";
 
@@ -19,6 +20,7 @@ export default function AppRoutes() {
             <Route path={"/profile/admin"} element={<UsersList />} />
             <Route path={"/profile/createcollection"} element={<CreateCollection />} />
             <Route path={"/profile/collection/:id"} element={<CollectionPage />} />
+            <Route path={"/profile/collection/:id/additem"} element={<AddItem />} />
             <Route path={"/item/:id"} element={<ItemPage />} />
         </Routes>
     )

@@ -21,14 +21,16 @@ export default function UsersList() {
 
       const deleteUser = (id) => {
         axios.delete(URI + "profile/" + id).then((response) => {
-          setUsers(response.data);
+          setUsers(users.filter((val) => {
+            return val.id !== id
+          }));
         })
       }
     
       return (
       <>
       {user.isAdmin ?
-        <div>
+        <>
           <h5 className="my-4"><Icon.PersonFillGear />&emsp;<FormattedMessage id="app.user.users" /></h5>
           <table className="table" id="custom-table">
             <thead>
@@ -56,7 +58,7 @@ export default function UsersList() {
               ))}
             </tbody>
           </table>
-        </div>
+        </>
         : <>
           <p className="my-4"><FormattedMessage id="app.profile.admin-page" /></p>
         </> 

@@ -10,7 +10,7 @@ import { UserContext } from "../../shared/context/UserContext";
 export default function Profile() {
     const { id } = useParams();
     const { user } = useContext(UserContext);
-    const [userObject, setUserObject] = useState({id: id, username: "", isAdmin: ""});
+    const [userObject, setUserObject] = useState({id: id, username: ""});
     const [userCollections, setUserCollections] = useState([]);
   
     useEffect(() => {
@@ -36,7 +36,7 @@ export default function Profile() {
           }
         </div>
         <Link to={"/profile/createcollection"}>
-          <button className="btn btn-success my-3">
+          <button className="btn btn-sm btn-success my-3">
             <Icon.FolderPlus />&ensp;<FormattedMessage id="app.profile.createbtn" />
           </button>
         </Link>
@@ -48,7 +48,7 @@ export default function Profile() {
             <div className="card-img-overlay">
               <h5 className="card-title">
                 {collection.title}
-                <span className="badge bg-secondary mx-1" id="small">12</span>
+                <span className="badge bg-secondary mx-1" id="small"></span>
               </h5>
               <p className="card-text">{collection.topic}</p>
               <p className="card-text text-truncate">{collection.description}</p>

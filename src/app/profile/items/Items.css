@@ -9,3 +9,11 @@
 #comment {
     max-width: 500px;
 }
+.like {
+    margin-right: 8px;
+    cursor: pointer;
+}
+.likes_counter {
+    font-size: 14px;
+    font-weight: 500;
+}

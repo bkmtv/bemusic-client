@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { URI } from "../../../shared/constants/api";
+import "./Items.css";
 import * as Icon from "react-bootstrap-icons";
 
 export default function ItemPage() {
@@ -35,10 +36,16 @@ export default function ItemPage() {
     
       const likeItem = (itemId) => {
         axios.post(URI + "like", { ItemId: itemId },
-            { headers: { token: localStorage.getItem("token") } }).then(() => {
-              console.log("Liked");
-      })
-    };
+            { headers: { token: localStorage.getItem("token") } }).then((response) => {
+              if (response.data.liked) {
+                setItemObj({...itemObj, Likes: [...itemObj.Likes, 1]})
+              } else {
+                const likes = itemObj.Likes;
+                likes.pop();
+                setItemObj({...itemObj, Likes: likes});
+              }
+        })
+      };
 
     return (
         <>
@@ -49,9 +56,9 @@ export default function ItemPage() {
         <h3>{itemObj.name} </h3>
         <p>Tags</p>
 
-        <button onClick={() => likeItem(itemObj.id)}>
-          <Icon.Heart />
-        </button><br />
+        <Icon.StarFill className="like" onClick={() => likeItem(itemObj.id)} />
+          <label className="likes_counter">{Array.isArray(itemObj.Likes) ? itemObj.Likes.length : 0}</label>
+        <br />
 
         <label className="mt-3 mb-1">Leave a comment</label>
         <textarea

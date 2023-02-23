@@ -46,11 +46,9 @@ export default function Profile() {
           <div className="card" id="card">
           <img src={collection.image} className="card-img" alt="" id="hideImg" onError={hideImg} />
             <div className="card-img-overlay">
-              <h5 className="card-title">
-                {collection.title}
-                <span className="badge bg-secondary mx-1" id="small"></span>
-              </h5>
-              <p className="card-text">{collection.topic}</p>
+              <h5 className="card-title">{collection.title}</h5>
+              <div className="text-muted small">{collection.itemCount} items</div>
+              <p className="card-text topic">{collection.topic}</p>
               <p className="card-text text-truncate">{collection.description}</p>
               <Link to={`/collection/${collection.id}`} className="stretched-link"></Link>
             </div>

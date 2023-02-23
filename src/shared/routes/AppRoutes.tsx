@@ -3,10 +3,10 @@ import UsersList from "../../app/admin/UsersList";
 import Signin from "../../app/auth/Signin";
 import Signup from "../../app/auth/Signup";
 import Home from "../../app/home/Home";
-import CollectionPage from "../../app/profile/collections/CollectionPage";
-import CreateCollection from "../../app/profile/collections/CreateCollection";
-import AddItem from "../../app/profile/items/AddItem";
-import ItemPage from "../../app/profile/items/ItemPage";
+import CollectionPage from "../../app/collections/CollectionPage";
+import CreateCollection from "../../app/collections/CreateCollection";
+import AddItem from "../../app/items/AddItem";
+import ItemPage from "../../app/items/ItemPage";
 import Profile from "../../app/profile/Profile";
 
 export default function AppRoutes() {
@@ -18,9 +18,9 @@ export default function AppRoutes() {
             <Route path={"/signup"} element={<Signup />} />
             <Route path={"/profile/:id"} element={<Profile />} />
             <Route path={"/profile/admin"} element={<UsersList />} />
-            <Route path={"/profile/createcollection"} element={<CreateCollection />} />
-            <Route path={"/profile/collection/:id"} element={<CollectionPage />} />
-            <Route path={"/profile/collection/:id/additem"} element={<AddItem />} />
+            <Route path={"/createcollection"} element={<CreateCollection />} />
+            <Route path={"/collection/:id"} element={<CollectionPage />} />
+            <Route path={"/collection/:id/additem"} element={<AddItem />} />
             <Route path={"/item/:id"} element={<ItemPage />} />
         </Routes>
     )

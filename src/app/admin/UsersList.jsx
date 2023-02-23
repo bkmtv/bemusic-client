@@ -20,7 +20,7 @@ export default function UsersList() {
       }, [setUsers]);
 
       const deleteUser = (id) => {
-        axios.delete(URI + "profile/" + id).then((response) => {
+        axios.delete(URI + "profile/" + id).then(() => {
           setUsers(users.filter((val) => {
             return val.id !== id
           }));

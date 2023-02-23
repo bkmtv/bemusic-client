@@ -35,7 +35,7 @@ export default function Profile() {
             : <></>
           }
         </div>
-        <Link to={"/profile/createcollection"}>
+        <Link to={"/createcollection"}>
           <button className="btn btn-sm btn-success my-3">
             <Icon.FolderPlus />&ensp;<FormattedMessage id="app.profile.createbtn" />
           </button>
@@ -52,7 +52,7 @@ export default function Profile() {
               </h5>
               <p className="card-text">{collection.topic}</p>
               <p className="card-text text-truncate">{collection.description}</p>
-              <Link to={`/profile/collection/${collection.id}`} className="stretched-link"></Link>
+              <Link to={`/collection/${collection.id}`} className="stretched-link"></Link>
             </div>
           </div>
           </div>

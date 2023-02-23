@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { URI } from "../../../shared/constants/api";
+import { URI } from "../../shared/constants/api";
 import * as Icon from "react-bootstrap-icons";
 
 export default function Collection() {
@@ -35,7 +35,7 @@ export default function Collection() {
             </button>
             <h4>{collectionObj.title}</h4>
             <p>{collectionObj.description}</p>
-            <Link to={`/profile/collection/${id}/additem`}>
+            <Link to={`/collection/${id}/additem`}>
                 <button className="btn btn-sm btn-primary my-3">
                     <Icon.PlusLg />&ensp;
                     <FormattedMessage id="app.profile.collection.addItem" />

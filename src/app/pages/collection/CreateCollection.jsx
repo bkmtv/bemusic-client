@@ -111,7 +111,10 @@ const Form = () => {
           <FormattedMessage id="app.profile.createclc.img" />
         </label>
         <br />
-        <input type="file" onChange={(e) => setFile(e.target.files[0])} />
+        <label className="file-upload">
+          Choose image
+          <input type="file" onChange={(e) => setFile(e.target.files[0])} />
+        </label>
         <br />
         <button
           disabled={loading !== null && loading < 100}

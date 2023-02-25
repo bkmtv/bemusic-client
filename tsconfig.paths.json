@@ -4,7 +4,8 @@
       "paths": {
         "@constants/*": ["src/shared/constants/*"],
         "@context/*": ["src/shared/context/*"],
-        "@lang/*": ["src/shared/lang/*"]
+        "@lang/*": ["src/shared/lang/*"],
+        "@styles/*": ["src/shared/styles/*"]
       }
     }
   }

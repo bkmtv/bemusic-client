@@ -1,21 +1,25 @@
 nav button, nav a {
-    color: var(--text-primary);
+    color: var(--primary-color);
     border: none;
     background: none;
     text-decoration: none;
   }
+
 nav a:hover {
-    color: var(--text-secondary);;
+    color: var(--secondary-color);
 }
-.header__logo {
+
+.logo {
   font-size: 26px;
   font-weight: 500;
   margin: 0 30px 5px 0;
 }
-.nav__icon {
+
+.icon {
   color: var(--text-primary);
   font-size: 26px;
 }
-.navbar-toggler {
+
+.toggler {
   border: none !important;
 }

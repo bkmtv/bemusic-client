@@ -3,7 +3,7 @@ import axios from "axios";
 import { useForm } from "react-hook-form";
 import { FormattedMessage } from "react-intl";
 import { useNavigate } from "react-router-dom";
-import "./Sign.css";
+import "./Auth.scss";
 
 export default function Signup() {
   const navigate = useNavigate();

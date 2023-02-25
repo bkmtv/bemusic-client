@@ -4,7 +4,7 @@ import { URI } from "@constants/api";
 import axios from "axios";
 import * as Icon from "react-bootstrap-icons";
 import { useNavigate, useParams } from "react-router-dom";
-import "./Items.css";
+import "./Item.scss";
 
 export default function ItemPage() {
   const { id } = useParams();
@@ -72,7 +72,7 @@ export default function ItemPage() {
       <h3>{itemObj.name} </h3>
       <p>Tags</p>
 
-      <Icon.StarFill className="like" onClick={() => likeItem(itemObj.id)} />
+      <Icon.StarFill className={"like"} onClick={() => likeItem(itemObj.id)} />
       <label className="likes_counter">
         {Array.isArray(itemObj.Likes) ? itemObj.Likes.length : 0}
       </label>

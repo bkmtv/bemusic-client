@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { v4 } from "uuid";
 
 import { storage } from "../../../firebase";
-import "./Collections.css";
+import "./Collection.scss";
 
 const Form = () => {
   const navigate = useNavigate();

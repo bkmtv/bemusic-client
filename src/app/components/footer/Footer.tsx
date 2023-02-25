@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <div className="py-5">
-      <p>
+    <div className="my-5">
+      <p className="text-muted">
         Created during an internship at Itransition.
         <br />
         2023

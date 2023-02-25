@@ -1,12 +1,14 @@
-import "./App.css";
 import { useContext } from "react";
 
 import { LocaleContext } from "@context/LocaleContext";
 import { ThemeContext } from "@context/ThemeContext";
 import { UserProvider } from "@context/UserContext";
+import classNames from "classnames";
 import { IntlProvider } from "react-intl";
 import { BrowserRouter } from "react-router-dom";
 
+import "./App.scss";
+import "@styles/theme.scss";
 import Header from "./components/header/Header";
 import AppRoutes from "../shared/routes/AppRoutes";
 
@@ -18,8 +20,8 @@ function App() {
     <IntlProvider messages={messages} locale={locale}>
       <BrowserRouter>
         <UserProvider>
-          <div className={`App ${theme}`}>
-            <div className="container px-4 pt-5">
+          <div className={classNames("app", theme)}>
+            <div className="container p-4">
               <Header />
               <AppRoutes />
             </div>

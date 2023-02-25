@@ -4,7 +4,7 @@ import { URI } from "@constants/api";
 import axios from "axios";
 import * as Icon from "react-bootstrap-icons";
 import { useNavigate, useParams } from "react-router-dom";
-import "./Items.css";
+import "./Item.scss";
 
 export default function AddItem() {
   const { id } = useParams();

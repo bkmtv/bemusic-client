@@ -1,11 +1,12 @@
-import "./Header.css";
 import { useContext } from "react";
 
 import { UserContext } from "@context/UserContext";
+import classNames from "classnames";
 import * as Icon from "react-bootstrap-icons";
 import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
 
+import styles from "./Header.module.scss";
 import Login from "./Login";
 import Register from "./Register";
 import Search from "./Search";
@@ -20,12 +21,12 @@ function Header() {
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid p-0">
         <Link to={"/"}>
-          <div className="header__logo">
+          <div className={styles.logo}>
             <Icon.Collection /> <FormattedMessage id="app.header.logo" />
           </div>
         </Link>
         <button
-          className="navbar-toggler"
+          className={classNames("navbar-toggler", styles.toggler)}
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -33,7 +34,7 @@ function Header() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="nav__icon">
+          <span className={styles.icon}>
             <Icon.List />
           </span>
         </button>

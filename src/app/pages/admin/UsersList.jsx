@@ -5,8 +5,9 @@ import { UserContext } from "@context/UserContext";
 import axios from "axios";
 import * as Icon from "react-bootstrap-icons";
 import { FormattedMessage } from "react-intl";
-import "./UsersList.css";
 import { Link } from "react-router-dom";
+
+import "./UsersList.scss";
 
 export default function UsersList() {
   const { user } = useContext(UserContext);
@@ -37,7 +38,7 @@ export default function UsersList() {
             &emsp;
             <FormattedMessage id="app.user.users" />
           </h5>
-          <table className="table" id="custom-table">
+          <table className="table">
             <thead>
               <tr>
                 <th scope="col">ID</th>

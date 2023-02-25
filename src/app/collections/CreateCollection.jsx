@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { storage } from "../../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { URI } from "../../shared/constants/api";
+import { URI } from "@constants/api";
 import { FormattedMessage } from "react-intl";
 import { v4 } from "uuid";
 import { useNavigate } from "react-router-dom";

@@ -1,6 +1,6 @@
-import { createContext, useState, useEffect } from 'react';
-import axios from 'axios';
-import { URI } from '../constants/api';
+import { createContext, useState, useEffect } from "react";
+import axios from "axios";
+import { URI } from "@constants/api";
 
 const UserContext = createContext();
 
@@ -9,16 +9,18 @@ const UserProvider = ({ children }) => {
 
   useEffect(() => {
     const refreshUser = () => {
-      axios.get(URI + "auth/user", {
-        headers: {token: localStorage.getItem("token")},
-      }).then(({data}) => {
-        if (data.error) {
-          setUser({isLoggedIn: false, ...data })
-        } else {
-          setUser({isLoggedIn: true, ...data });
-        }
-      })
-    }
+      axios
+        .get(URI + "auth/user", {
+          headers: { token: localStorage.getItem("token") },
+        })
+        .then(({ data }) => {
+          if (data.error) {
+            setUser({ isLoggedIn: false, ...data });
+          } else {
+            setUser({ isLoggedIn: true, ...data });
+          }
+        });
+    };
     refreshUser();
   }, [setUser]);
 

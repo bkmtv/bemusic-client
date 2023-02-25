@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { URI } from "../../shared/constants/api";
+import { URI } from "@constants/api";
 import "./Items.css";
 import * as Icon from "react-bootstrap-icons";
 

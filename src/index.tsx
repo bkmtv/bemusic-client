@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { ThemeProvider } from "./shared/context/ThemeContext";
-import { LocaleProvider } from "./shared/context/LocaleContext";
+import { ThemeProvider } from "@context/ThemeContext";
+import { LocaleProvider } from "@context/LocaleContext";
 import './index.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";

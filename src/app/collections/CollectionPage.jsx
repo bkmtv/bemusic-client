@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { URI } from "../../shared/constants/api";
+import { URI } from "@constants/api";
 import * as Icon from "react-bootstrap-icons";
 
 export default function Collection() {

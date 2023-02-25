@@ -3,9 +3,9 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { useParams, Link } from "react-router-dom";
-import { URI } from "../../shared/constants/api";
+import { URI } from "@constants/api";
 import * as Icon from "react-bootstrap-icons";
-import { UserContext } from "../../shared/context/UserContext";
+import { UserContext } from "@context/UserContext";
 
 export default function Profile() {
     const { id } = useParams();

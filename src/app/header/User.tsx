@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { FormattedMessage } from "react-intl";
 import { Link, useNavigate } from "react-router-dom";
-import { UserContext } from "../../shared/context/UserContext";
+import { UserContext } from "@context/UserContext";
 
 export default function Login() {
     const navigate = useNavigate();

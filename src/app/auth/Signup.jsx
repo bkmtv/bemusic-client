@@ -2,7 +2,7 @@ import { FormattedMessage } from "react-intl";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useForm } from "react-hook-form";
-import { URI } from "../../shared/constants/api";
+import { URI } from "@constants/api";
 import "./Sign.css";
 
 export default function Signup() {

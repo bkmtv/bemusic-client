@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { URI } from "../../shared/constants/api";
+import { URI } from "@constants/api";
 import Footer from "./Footer";
 import "./Home.css";
 

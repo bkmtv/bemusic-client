@@ -1,6 +1,6 @@
 import { useEffect, createContext, useState } from "react";
-import English from "../lang/en.json";
-import Russian from "../lang/ru.json";
+import English from "@lang/en.json";
+import Russian from "@lang/ru.json";
 
 const LocaleContext = createContext();
 
@@ -16,7 +16,11 @@ const getLocale = () => {
 
 const getMessages = () => {
   const locale = localStorage.getItem("locale");
-  if (locale === "en") {return English} else {return Russian}
+  if (locale === "en") {
+    return English;
+  } else {
+    return Russian;
+  }
 };
 
 const LocaleProvider = ({ children }) => {
@@ -30,7 +34,7 @@ const LocaleProvider = ({ children }) => {
       setLocale("en");
       setMessages(English);
     }
-  };
+  }
 
   useEffect(() => {
     const refreshLocale = () => {

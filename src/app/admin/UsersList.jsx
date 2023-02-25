@@ -3,9 +3,9 @@ import { useContext, useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import "./UsersList.css";
 import * as Icon from "react-bootstrap-icons";
-import { URI } from "../../shared/constants/api";
+import { URI } from "@constants/api";
 import { Link } from "react-router-dom";
-import { UserContext } from "../../shared/context/UserContext";
+import { UserContext } from "@context/UserContext";
 
 export default function UsersList() {
     const { user } = useContext(UserContext);

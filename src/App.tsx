@@ -1,12 +1,12 @@
 import './App.css';
 import { useContext } from "react";
 import Header from './app/header/Header';
-import { ThemeContext } from "./shared/context/ThemeContext";
-import { LocaleContext } from "./shared/context/LocaleContext";
+import { ThemeContext } from "@context/ThemeContext";
+import { LocaleContext } from "@context/LocaleContext";
 import { IntlProvider } from "react-intl";
 import { BrowserRouter } from "react-router-dom";
 import AppRoutes from "./shared/routes/AppRoutes";
-import { UserProvider } from './shared/context/UserContext';
+import { UserProvider } from '@context/UserContext';
 
 function App() {
   const { theme } = useContext(ThemeContext);

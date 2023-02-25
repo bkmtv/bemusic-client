@@ -9,7 +9,7 @@ import * as Icon from "react-bootstrap-icons";
 import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { UserContext } from "../../shared/context/UserContext";
+import { UserContext } from "@context/UserContext";
 
 function Header() {
   const { user } = useContext(UserContext);

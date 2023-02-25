@@ -1,4 +1,4 @@
-import { initializeApp } from 'firebase/app';
+import { initializeApp } from "firebase/app";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
@@ -8,7 +8,7 @@ const firebaseConfig = {
   storageBucket: "collections-46742.appspot.com",
   messagingSenderId: "418567346794",
   appId: "1:418567346794:web:37f7a3f0b2ba3ffbc78813",
-  measurementId: "G-QDJPBVYKC7"
+  measurementId: "G-QDJPBVYKC7",
 };
 
 const app = initializeApp(firebaseConfig);

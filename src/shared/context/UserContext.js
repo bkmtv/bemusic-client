@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from "react";
-import axios from "axios";
+
 import { URI } from "@constants/api";
+import axios from "axios";
 
 const UserContext = createContext();
 

@@ -7,8 +7,8 @@ import { UserProvider } from "@context/UserContext";
 import { IntlProvider } from "react-intl";
 import { BrowserRouter } from "react-router-dom";
 
-import Header from "./app/header/Header";
-import AppRoutes from "./shared/routes/AppRoutes";
+import Header from "./components/header/Header";
+import AppRoutes from "../shared/routes/AppRoutes";
 
 function App() {
   const { theme } = useContext(ThemeContext);

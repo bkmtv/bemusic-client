@@ -1,14 +1,14 @@
 import { Routes, Route } from "react-router-dom";
 
-import UsersList from "../../app/admin/UsersList";
-import Signin from "../../app/auth/Signin";
-import Signup from "../../app/auth/Signup";
-import CollectionPage from "../../app/collections/CollectionPage";
-import CreateCollection from "../../app/collections/CreateCollection";
-import Home from "../../app/home/Home";
-import AddItem from "../../app/items/AddItem";
-import ItemPage from "../../app/items/ItemPage";
-import Profile from "../../app/profile/Profile";
+import UsersList from "../../app/pages/admin/UsersList";
+import Signin from "../../app/pages/auth/Signin";
+import Signup from "../../app/pages/auth/Signup";
+import CollectionPage from "../../app/pages/collection/CollectionPage";
+import CreateCollection from "../../app/pages/collection/CreateCollection";
+import Home from "../../app/pages/home/Home";
+import AddItem from "../../app/pages/item/AddItem";
+import ItemPage from "../../app/pages/item/ItemPage";
+import Profile from "../../app/pages/profile/Profile";
 
 export default function AppRoutes() {
   return (

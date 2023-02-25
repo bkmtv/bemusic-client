@@ -4,7 +4,7 @@ import { URI } from "@constants/api";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-import Footer from "./Footer";
+import Footer from "../../components/footer/Footer";
 import "./Home.css";
 
 export default function Home() {

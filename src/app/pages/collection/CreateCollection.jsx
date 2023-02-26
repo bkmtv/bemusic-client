@@ -7,8 +7,8 @@ import { FormattedMessage } from "react-intl";
 import { useNavigate } from "react-router-dom";
 import { v4 } from "uuid";
 
+import "./Collection.css";
 import { storage } from "../../../firebase";
-import "./Collection.scss";
 
 const Form = () => {
   const navigate = useNavigate();
@@ -63,7 +63,7 @@ const Form = () => {
   };
 
   return (
-    <div className="form m-auto">
+    <div className="form m-auto col__form">
       <h4 className="mt-4 text-center">
         <FormattedMessage id="app.profile.createclc" />
       </h4>
@@ -111,7 +111,7 @@ const Form = () => {
           <FormattedMessage id="app.profile.createclc.img" />
         </label>
         <br />
-        <label className="file-upload">
+        <label className="col__upload">
           Choose image
           <input type="file" onChange={(e) => setFile(e.target.files[0])} />
         </label>

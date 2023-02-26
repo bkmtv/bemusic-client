@@ -10,6 +10,7 @@
   "app.auth.sign-up": "Создать аккаунт",
   "app.auth.sign-up.btn": "Отправить",
   "app.auth.logout": "Выйти",
+  "app.search": "Поиск",
   "app.user.hello": "Коллекции пользователя",
   "app.user.users": "Управление пользователями",
   "app.user.users.name": "Имя пользователя",

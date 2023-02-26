@@ -6,6 +6,8 @@ import * as Icon from "react-bootstrap-icons";
 import { FormattedMessage } from "react-intl";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
+import "./Collection.css";
+
 export default function Collection() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -40,7 +42,7 @@ export default function Collection() {
         className="btn btn-sm btn-outline-secondary mb-3"
       >
         <Icon.ArrowLeftSquare />
-        &ensp;Back to list of collections
+        &ensp;Back
       </button>
       <h4>{collectionObj.title}</h4>
       <p>{collectionObj.description}</p>
@@ -52,7 +54,7 @@ export default function Collection() {
         </button>
       </Link>
 
-      <table className="table" id="custom-table">
+      <table className="table table-borderless col__table">
         <thead>
           <tr>
             <th scope="col">ID</th>
@@ -75,6 +77,7 @@ export default function Collection() {
               <td>Field</td>
               <td>
                 <button
+                  className="col__button"
                   onClick={() => {
                     deleteItem(item.id);
                   }}

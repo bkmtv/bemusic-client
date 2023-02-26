@@ -4,8 +4,8 @@ import { URI } from "@constants/api";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+import "./Home.css";
 import Footer from "../../components/footer/Footer";
-import "./Home.scss";
 
 export default function Home() {
   const [lastItems, setLastItems] = useState([]);
@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <>
       <div className="row mt-4">
-        <div className="col card card-home p-3 m-1">
+        <div className="col card p-3 m-1 home__card">
           <h5>Last added items</h5>
           {lastItems.map((item, key) => (
             <ul key={key} className="home">
@@ -37,7 +37,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="col card card-home p-3 m-1">
+        <div className="col card p-3 m-1 home__card">
           <h5>Largest collections</h5>
           {largeCollections.map((col, key) => (
             <ul key={key} className="home">

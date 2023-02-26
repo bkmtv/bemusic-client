@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 import { FormattedMessage } from "react-intl";
 import { useNavigate } from "react-router-dom";
 
-import "./Auth.scss";
+import "./Auth.css";
 
 export default function Signin() {
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ export default function Signin() {
   };
 
   return (
-    <main className="form-signin w-100 m-auto">
+    <main className="form-signin w-100 m-auto auth__main">
       <form className="pt-5" onSubmit={handleSubmit(onSubmit)}>
         <div className="h3 text-center">
           <FormattedMessage id="app.auth.sign-in" />

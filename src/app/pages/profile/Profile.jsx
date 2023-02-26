@@ -1,4 +1,4 @@
-import "./Profile.scss";
+import "./Profile.css";
 import { useContext, useEffect, useState } from "react";
 
 import { URI } from "@constants/api";
@@ -32,7 +32,7 @@ export default function Profile() {
       <div className="h5 pt-4 hstack">
         <FormattedMessage id="app.user.hello" /> {userObject.username}
         {user.isAdmin ? (
-          <Link to={"/profile/admin"} className="ms-auto admin">
+          <Link to={"/profile/admin"} className="ms-auto profile__admin">
             <Icon.PersonFillGear /> <FormattedMessage id="app.user.users" />
           </Link>
         ) : (
@@ -49,10 +49,9 @@ export default function Profile() {
       <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
         {userCollections.map((collection, key) => (
           <div className="col" key={key}>
-            <div className="card card-col">
+            <div className="card profile__card">
               <img
                 src={collection.image}
-                className="card-img"
                 alt=""
                 id="hideImg"
                 onError={hideImg}
@@ -62,7 +61,7 @@ export default function Profile() {
                 <div className="text-muted small">
                   {collection.itemCount} items
                 </div>
-                <p className="card-text topic">{collection.topic}</p>
+                <p className="card-text profile__topic">{collection.topic}</p>
                 <p className="card-text text-truncate">
                   {collection.description}
                 </p>

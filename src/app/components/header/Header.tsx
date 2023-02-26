@@ -1,15 +1,14 @@
 import { useContext } from "react";
 
 import { UserContext } from "@context/UserContext";
-import classNames from "classnames";
 import * as Icon from "react-bootstrap-icons";
 import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
 
-import styles from "./Header.module.scss";
+import "./Header.css";
 import Login from "./Login";
 import Register from "./Register";
-import Search from "./Search";
+import Search from "./Search/Search";
 import ToggleLocale from "./ToggleLocale";
 import ToggleTheme from "./ToggleTheme";
 import User from "./User";
@@ -21,12 +20,12 @@ function Header() {
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid p-0">
         <Link to={"/"}>
-          <div className={styles.logo}>
+          <div className="logo">
             <Icon.Collection /> <FormattedMessage id="app.header.logo" />
           </div>
         </Link>
         <button
-          className={classNames("navbar-toggler", styles.toggler)}
+          className="navbar-toggler toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -34,7 +33,7 @@ function Header() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className={styles.icon}>
+          <span className="icon">
             <Icon.List />
           </span>
         </button>

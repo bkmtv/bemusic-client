@@ -4,7 +4,7 @@ import { URI } from "@constants/api";
 import axios from "axios";
 import * as Icon from "react-bootstrap-icons";
 import { useNavigate, useParams } from "react-router-dom";
-import "./Item.scss";
+import "./Item.css";
 
 export default function AddItem() {
   const { id } = useParams();
@@ -37,9 +37,9 @@ export default function AddItem() {
         className="btn btn-sm btn-outline-secondary mb-3"
       >
         <Icon.ArrowLeftSquare />
-        &ensp;Back to collection
+        &ensp;Back
       </button>
-      <div className="form m-auto">
+      <div className="form m-auto item__form">
         <h4 className="text-center">Add new item</h4>
         <form onSubmit={handleSubmit}>
           <label className="mt-3 mb-1">Name</label>

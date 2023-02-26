@@ -1,23 +1,21 @@
-.form {
+.item__form {
     max-width: 500px !important;
 }
 
-.card {
+.item__card {
     max-width: 500px !important;
-    color: var(--text-primary) !important;
-    background: var(--bg-secondary) !important;
 }
 
-#comment {
+.item__comment {
     max-width: 500px;
 }
 
-.like {
+.item__like {
     margin-right: 8px;
     cursor: pointer;
 }
 
-.like-counter {
+.item__counter {
     font-size: 14px;
     font-weight: 500;
 }

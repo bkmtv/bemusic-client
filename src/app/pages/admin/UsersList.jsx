@@ -7,7 +7,7 @@ import * as Icon from "react-bootstrap-icons";
 import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
 
-import "./UsersList.scss";
+import "./UsersList.css";
 
 export default function UsersList() {
   const { user } = useContext(UserContext);
@@ -38,7 +38,7 @@ export default function UsersList() {
             &emsp;
             <FormattedMessage id="app.user.users" />
           </h5>
-          <table className="table">
+          <table className="table table-borderless admin__table">
             <thead>
               <tr>
                 <th scope="col">ID</th>
@@ -73,6 +73,7 @@ export default function UsersList() {
                   </td>
                   <td>
                     <button
+                      className="admin__button"
                       onClick={() => {
                         deleteUser(user.id);
                       }}

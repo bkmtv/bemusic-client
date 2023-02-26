@@ -1,0 +1,12 @@
+.admin__button {
+    color: var(--text-primary);
+    border: none;
+    background: none;
+    text-decoration: none;
+}
+
+.admin__table {
+    color: var(--primary-color) !important;
+    background: var(--secondary-bg) !important;
+    border-radius: 6px;
+}

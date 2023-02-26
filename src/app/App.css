@@ -5,7 +5,7 @@
   transition: 0.3s;
 }
 
-/* .card .form-control .form-select table {
+.form-control, .form-select {
   color: var(--primary-color) !important;
   background: var(--secondary-bg) !important;
-} */
+}

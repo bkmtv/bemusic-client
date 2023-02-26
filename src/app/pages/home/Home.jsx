@@ -24,7 +24,7 @@ export default function Home() {
     <>
       <div className="row mt-4">
         <div className="col card p-3 m-1 home__card">
-          <h5>Last added items</h5>
+          <h5 className="pb-1">Last added items</h5>
           {lastItems.map((item, key) => (
             <ul key={key} className="home">
               <li>
@@ -38,7 +38,7 @@ export default function Home() {
         </div>
 
         <div className="col card p-3 m-1 home__card">
-          <h5>Largest collections</h5>
+          <h5 className="pb-1">Largest collections</h5>
           {largeCollections.map((col, key) => (
             <ul key={key} className="home">
               <li>

@@ -93,13 +93,13 @@ export default function ItemPage() {
         }}
       />
       <button className="btn btn-sm btn-primary my-3" onClick={addComment}>
-        Sumbit
+        Submit
       </button>
 
       <div>
         {comments.map((comment, key) => {
           return (
-            <div className="card my-2" key={key}>
+            <div className="card my-2 item__comment" key={key}>
               <div className="card-body">
                 {comment.commentBody}
                 <div className="card-link text-muted mt-2">

@@ -32,6 +32,10 @@ const Form = () => {
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
           setLoading(progress);
         },
+        (error) => {
+          // eslint-disable-next-line no-console
+          console.log(error);
+        },
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
             setFormData((prev) => ({ ...prev, image: downloadURL }));
@@ -40,7 +44,7 @@ const Form = () => {
       );
     };
     file && uploadFile();
-  }, [file]);
+  }, [file, setFormData]);
 
   const handleChange = (event) => {
     setFormData({
@@ -112,7 +116,7 @@ const Form = () => {
         </label>
         <br />
         <label className="col__upload">
-          Choose image
+          Image
           <input type="file" onChange={(e) => setFile(e.target.files[0])} />
         </label>
         <br />

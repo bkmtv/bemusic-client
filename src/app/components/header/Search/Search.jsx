@@ -10,7 +10,7 @@ export default function Search() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get(URI + "item").then((response) => {
+    axios.get(URI + "item/search").then((response) => {
       setData(response.data);
     });
   }, []);

@@ -9,17 +9,17 @@ nav a:hover {
     color: var(--secondary-color);
 }
 
-.logo {
+.header__logo {
   font-size: 26px;
   font-weight: 500;
   margin: 0 30px 5px 0;
 }
 
-.icon {
-  color: var(--text-primary);
+.header__icon {
+  color: var(--primary-color);
   font-size: 26px;
 }
 
-.toggler {
+.header__toggler {
   border: none !important;
 }

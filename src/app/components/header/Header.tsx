@@ -20,12 +20,12 @@ function Header() {
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid p-0">
         <Link to={"/"}>
-          <div className="logo">
+          <div className="header__logo">
             <Icon.Collection /> <FormattedMessage id="app.header.logo" />
           </div>
         </Link>
         <button
-          className="navbar-toggler toggler"
+          className="navbar-toggler header__toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -33,7 +33,7 @@ function Header() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="icon">
+          <span className="header__icon">
             <Icon.List />
           </span>
         </button>

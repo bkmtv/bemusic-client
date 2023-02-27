@@ -66,7 +66,7 @@ export default function ItemPage() {
         className="btn btn-sm btn-outline-secondary mb-3"
       >
         <Icon.ArrowLeftSquare />
-        &ensp;Back to collection
+        &ensp;Back
       </button>
 
       <h3>{itemObj.name} </h3>

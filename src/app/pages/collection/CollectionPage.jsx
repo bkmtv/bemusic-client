@@ -33,6 +33,11 @@ export default function Collection() {
     });
   };
 
+  const deleteCollection = (id) => {
+    axios.delete(URI + "collection/" + id);
+    navigate(-1);
+  };
+
   return (
     <>
       <button
@@ -47,10 +52,19 @@ export default function Collection() {
       <h4>{collectionObj.title}</h4>
       <p>{collectionObj.description}</p>
       <Link to={`/collection/${id}/additem`}>
-        <button className="btn btn-sm btn-primary my-3">
+        <button className="btn btn-sm btn-success my-3">
           <Icon.PlusLg />
           &ensp;
           <FormattedMessage id="app.profile.collection.addItem" />
+        </button>
+
+        <button
+          className="btn btn-sm btn-danger my-3 mx-3"
+          onClick={() => {
+            deleteCollection(collectionObj.id);
+          }}
+        >
+          <Icon.Trash /> Delete collection
         </button>
       </Link>
 

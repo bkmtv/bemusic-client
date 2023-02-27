@@ -1,13 +1,22 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import { URI } from "@constants/api";
+import { LocaleContext } from "@context/LocaleContext";
 import axios from "axios";
+import TimeAgo from "javascript-time-ago";
+import en from "javascript-time-ago/locale/en.json";
+import ru from "javascript-time-ago/locale/ru.json";
 import { Link } from "react-router-dom";
 
 import "./Home.css";
+import LastAdded from "./LastAdded";
 import Footer from "../../components/footer/Footer";
 
+TimeAgo.addLocale(en);
+TimeAgo.addLocale(ru);
+
 export default function Home() {
+  const { locale } = useContext(LocaleContext);
   const [lastItems, setLastItems] = useState([]);
   const [largeCollections, setLargeCollections] = useState([]);
 
@@ -24,28 +33,24 @@ export default function Home() {
     <>
       <div className="row mt-4">
         <div className="col card p-3 m-1 home__card">
-          <h5 className="pb-1">Last added items</h5>
+          <h5 className="m-2">Last added items</h5>
           {lastItems.map((item, key) => (
-            <ul key={key} className="home">
-              <li>
-                <Link to={`item/${item.id}`}>{item.name}</Link>
-                <div className="text-muted small">
-                  {item.createdAt.slice(0, 10)}
-                </div>
-              </li>
-            </ul>
+            <div key={key} className="home__items">
+              <Link to={`item/${item.id}`}>{item.name}</Link>
+              <div className="text-muted ms-auto">
+                <LastAdded date={item.createdAt} locale={locale} />
+              </div>
+            </div>
           ))}
         </div>
 
         <div className="col card p-3 m-1 home__card">
-          <h5 className="pb-1">Largest collections</h5>
+          <h5 className="m-2">Largest collections</h5>
           {largeCollections.map((col, key) => (
-            <ul key={key} className="home">
-              <li>
-                <Link to={`collection/${col.id}`}>{col.title}</Link>
-                <div className="text-muted small">{col.itemCount} items</div>
-              </li>
-            </ul>
+            <div key={key} className="home__items">
+              <Link to={`collection/${col.id}`}>{col.title}</Link>
+              <div className="text-muted ms-auto">{col.itemCount} items</div>
+            </div>
           ))}
         </div>
       </div>

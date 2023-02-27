@@ -47,32 +47,45 @@ export default function Collection() {
         className="btn btn-sm btn-outline-secondary mb-3"
       >
         <Icon.ArrowLeftSquare />
-        &ensp;Back
+        &ensp;
+        <FormattedMessage id="app.back" />
       </button>
       <h4>{collectionObj.title}</h4>
       <p>{collectionObj.description}</p>
-      <Link to={`/collection/${id}/additem`}>
-        <button className="btn btn-sm btn-success my-3">
-          <Icon.PlusLg />
-          &ensp;
-          <FormattedMessage id="app.profile.collection.addItem" />
-        </button>
-
+      <div className="hstack">
+        <Link to={`/collection/${id}/additem`}>
+          <button className="btn btn-sm btn-outline-success my-3">
+            <Icon.PlusLg />
+            &ensp;
+            <FormattedMessage id="app.profile.collection.addItem" />
+          </button>
+        </Link>
+        <Link to={`/collection/${id}/additem`}>
+          <button className="btn btn-sm btn-outline-primary my-3 mx-3">
+            <Icon.PencilFill />
+            &ensp;
+            <FormattedMessage id="app.profile.collection.editCol" />
+          </button>
+        </Link>
         <button
-          className="btn btn-sm btn-danger my-3 mx-3"
+          className="btn btn-sm btn-outline-danger my-3 ms-auto"
           onClick={() => {
             deleteCollection(collectionObj.id);
           }}
         >
-          <Icon.Trash /> Delete collection
+          <Icon.Trash />
+          &ensp;
+          <FormattedMessage id="app.profile.collection.delete" />
         </button>
-      </Link>
+      </div>
 
       <table className="table table-borderless col__table">
         <thead>
           <tr>
             <th scope="col">ID</th>
-            <th scope="col">Name</th>
+            <th scope="col">
+              <FormattedMessage id="app.profile.collection.itemName" />
+            </th>
             <th scope="col">Tags</th>
             <th scope="col">Custom field</th>
             <th scope="col">

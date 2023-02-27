@@ -3,6 +3,7 @@ import { useState } from "react";
 import { URI } from "@constants/api";
 import axios from "axios";
 import * as Icon from "react-bootstrap-icons";
+import { FormattedMessage } from "react-intl";
 import { useNavigate, useParams } from "react-router-dom";
 import "./Item.css";
 
@@ -37,12 +38,17 @@ export default function AddItem() {
         className="btn btn-sm btn-outline-secondary mb-3"
       >
         <Icon.ArrowLeftSquare />
-        &ensp;Back
+        &ensp;
+        <FormattedMessage id="app.back" />
       </button>
       <div className="form m-auto item__form">
-        <h4 className="text-center">Add new item</h4>
+        <h4 className="text-center">
+          <FormattedMessage id="app.profile.collection.addItem" />
+        </h4>
         <form onSubmit={handleSubmit}>
-          <label className="mt-3 mb-1">Name</label>
+          <label className="mt-3 mb-1">
+            <FormattedMessage id="app.profile.collection.itemName" />
+          </label>
           <input
             type="text"
             name="name"
@@ -62,7 +68,7 @@ export default function AddItem() {
             className="form-control"
           />
           <button className="btn btn-primary mt-4 w-100" type="submit">
-            Submit
+            <FormattedMessage id="app.auth.sign-up.btn" />
           </button>
         </form>
       </div>

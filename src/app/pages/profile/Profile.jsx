@@ -57,9 +57,9 @@ export default function Profile() {
                 onError={hideImg}
               />
               <div className="card-img-overlay">
-                <h5 className="card-title">{collection.title}</h5>
-                <div className="text-muted small">
-                  {collection.itemCount} items
+                <div className="h5 card-title">{collection.title}</div>
+                <div className="badge text-bg-secondary profile__badge">
+                  {collection.itemCount}
                 </div>
                 <p className="card-text profile__topic">{collection.topic}</p>
                 <p className="card-text text-truncate">

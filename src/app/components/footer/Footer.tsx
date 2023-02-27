@@ -1,11 +1,19 @@
+import * as Icon from "react-bootstrap-icons";
+
+import "./Footer.css";
+
 export default function Footer() {
   return (
-    <div className="my-5">
-      <p className="text-muted">
+    <footer className="my-5 hstack">
+      <div className="text-muted">
         Created during an internship at Itransition.
-        <br />
-        2023
-      </p>
-    </div>
+      </div>
+      <div className="ms-auto">
+        <a href="https://github.com/bkmtv" target="_blank" rel="noreferrer">
+          <Icon.Github className="mx-2" />
+          bkmtv
+        </a>
+      </div>
+    </footer>
   );
 }

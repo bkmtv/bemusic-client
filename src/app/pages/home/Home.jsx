@@ -6,6 +6,7 @@ import axios from "axios";
 import TimeAgo from "javascript-time-ago";
 import en from "javascript-time-ago/locale/en.json";
 import ru from "javascript-time-ago/locale/ru.json";
+import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
 
 import "./Home.css";
@@ -31,27 +32,37 @@ export default function Home() {
 
   return (
     <>
-      <div className="row mt-4">
-        <div className="col card p-3 m-1 home__card">
-          <h5 className="m-2">Last added items</h5>
-          {lastItems.map((item, key) => (
-            <div key={key} className="home__items">
-              <Link to={`item/${item.id}`}>{item.name}</Link>
-              <div className="text-muted ms-auto">
-                <LastAdded date={item.createdAt} locale={locale} />
+      <div className="row row-cols-1 row-cols-md-2 mt-4 g-3">
+        <div className="col">
+          <div className="card p-3 home__card">
+            <h5 className="m-2">
+              <FormattedMessage id="app.home.lastitems" />
+            </h5>
+            {lastItems.map((item, key) => (
+              <div key={key} className="home__items">
+                <Link to={`item/${item.id}`}>{item.name}</Link>
+                <div className="text-muted ms-auto">
+                  <LastAdded date={item.createdAt} locale={locale} />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
-        <div className="col card p-3 m-1 home__card">
-          <h5 className="m-2">Largest collections</h5>
-          {largeCollections.map((col, key) => (
-            <div key={key} className="home__items">
-              <Link to={`collection/${col.id}`}>{col.title}</Link>
-              <div className="text-muted ms-auto">{col.itemCount} items</div>
-            </div>
-          ))}
+        <div className="col">
+          <div className="card p-3 home__card">
+            <h5 className="m-2">
+              <FormattedMessage id="app.home.largestcols" />
+            </h5>
+            {largeCollections.map((col, key) => (
+              <div key={key} className="home__items">
+                <Link to={`collection/${col.id}`}>{col.title}</Link>
+                <div className="ms-auto badge text-bg-secondary">
+                  {col.itemCount}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <Footer />

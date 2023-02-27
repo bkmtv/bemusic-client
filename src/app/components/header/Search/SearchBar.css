@@ -1,10 +1,10 @@
 .result {
   position: absolute;
-  width: 202px;
+  width: 203px;
   z-index: 1;
   background: var(--secondary-bg);
-  padding: 8px 12px;
-  margin-top: 8px;
+  padding: 6px 12px;
+  margin: 8px 0 0 8px;
   border: 1px solid #ccc;
   border-radius: 6px;
 }

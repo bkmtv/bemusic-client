@@ -19,7 +19,8 @@
   "app.user.users.action": "Action",
   "app.user.users.admin": "Admin",
   "app.user.users.user": "User",
-  "app.home.welcome": "Welcome to Collections",
+  "app.home.lastitems": "Last added items",
+  "app.home.largestcols": "Largest collections",
   "app.profile.admin-page": "Oops... Only administrators can see this page.",
   "app.profile.col.title": "Title",
   "app.profile.col.description": "Description",
@@ -35,5 +36,9 @@
   "app.profile.createclc.people": "People",
   "app.profile.createclc.things": "Things",
   "app.profile.collection.title": "Collection",
-  "app.profile.collection.addItem": "Add new item"
+  "app.profile.collection.addItem": "Add new item",
+  "app.profile.collection.editCol": "Edit collection",
+  "app.back": "Back",
+  "app.profile.collection.delete": "Delete collection",
+  "app.profile.collection.itemName": "Name"
 }

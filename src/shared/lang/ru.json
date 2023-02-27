@@ -19,7 +19,8 @@
   "app.user.users.action": "Действие",
   "app.user.users.admin": "Администратор",
   "app.user.users.user": "Пользователь",
-  "app.home.welcome": "Добро пожаловать в Коллекции",
+  "app.home.lastitems": "Последние добавленные записи",
+  "app.home.largestcols": "Самые большие коллекции",
   "app.profile.admin-page": "Упс... Только администраторы могут видеть эту страницу.",
   "app.profile.col.title": "Заголовок",
   "app.profile.col.description": "Описание",
@@ -35,5 +36,9 @@
   "app.profile.createclc.people": "Люди",
   "app.profile.createclc.things": "Вещи",
   "app.profile.collection.title": "Коллекция",
-  "app.profile.collection.addItem": "Добавить новый элемент"
+  "app.profile.collection.addItem": "Добавить новую запись",
+  "app.profile.collection.editCol": "Редактировать коллекцию",
+  "app.back": "Назад",
+  "app.profile.collection.delete": "Удалить коллекцию",
+  "app.profile.collection.itemName": "Название"
 }

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { URI } from "@constants/api";
 import axios from "axios";
 import * as Icon from "react-bootstrap-icons";
+import { FormattedMessage } from "react-intl";
 import { useNavigate, useParams } from "react-router-dom";
 import "./Item.css";
 
@@ -66,7 +67,8 @@ export default function ItemPage() {
         className="btn btn-sm btn-outline-secondary mb-3"
       >
         <Icon.ArrowLeftSquare />
-        &ensp;Back
+        &ensp;
+        <FormattedMessage id="app.back" />
       </button>
 
       <h3>{itemObj.name} </h3>

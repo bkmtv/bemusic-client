@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 import { URI } from "@constants/api";
 import axios from "axios";
-import * as Icon from "react-bootstrap-icons";
 
 import SearchMini from "./SearchMini";
 
@@ -36,11 +35,8 @@ export default function Search() {
 
   return (
     <div className="ms-auto">
-      <form className="d-flex" role="search">
+      <form className="w-100" role="search">
         <SearchMini data={data} />
-        <button type="submit">
-          <Icon.Search />
-        </button>
       </form>
     </div>
   );

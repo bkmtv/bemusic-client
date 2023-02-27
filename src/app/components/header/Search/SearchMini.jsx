@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import MiniSearch from "minisearch";
+import * as Icon from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 import "./SearchBar.css";
 
@@ -30,10 +31,11 @@ function SearchMini({ data }) {
 
   return (
     <div>
-      <div>
+      <div className="d-flex mx-2">
         <input
           type="text"
           className="form-control"
+          placeholder="Search"
           value={search}
           onChange={handleChange}
         />
@@ -48,7 +50,12 @@ function SearchMini({ data }) {
                 to={`/item/${value.id}`}
                 onClick={clearInput}
               >
-                <p>{value.name}</p>
+                <div className="hstack">
+                  {value.name}
+                  <div className="ms-auto">
+                    <Icon.ArrowRightShort />
+                  </div>
+                </div>
               </Link>
             );
           })}

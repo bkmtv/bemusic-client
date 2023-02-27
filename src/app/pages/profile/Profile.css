@@ -27,3 +27,9 @@
     font-weight: 600;
     opacity: 0.7;
 }
+
+.profile__badge {
+    position: absolute;
+    top: 18px;
+    right: 15px;
+}

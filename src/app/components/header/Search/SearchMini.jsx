@@ -31,7 +31,7 @@ function SearchMini({ data }) {
 
   return (
     <div>
-      <div className="d-flex mx-2">
+      <div className="d-flex">
         <input
           type="text"
           className="form-control"

@@ -7,6 +7,7 @@ import { IntlProvider } from "react-intl";
 import { BrowserRouter } from "react-router-dom";
 
 import "./App.css";
+import "react-toastify/dist/ReactToastify.css";
 import "@styles/theme.css";
 import Header from "./components/header/Header";
 import AppRoutes from "../shared/routes/AppRoutes";

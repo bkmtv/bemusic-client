@@ -29,6 +29,18 @@ export default function UsersList() {
     });
   };
 
+  const makeAdmin = (id) => {
+    axios.patch(URI + "profile/" + id).then((response) => {
+      setUsers(response.data);
+    });
+  };
+
+  const makeUser = (id) => {
+    axios.put(URI + "profile/" + id).then((response) => {
+      setUsers(response.data);
+    });
+  };
+
   return (
     <>
       {user.isAdmin ? (
@@ -72,6 +84,22 @@ export default function UsersList() {
                     )}
                   </td>
                   <td>
+                    <button
+                      className="admin__button"
+                      onClick={() => {
+                        makeUser(user.id);
+                      }}
+                    >
+                      <Icon.PersonFill />
+                    </button>
+                    <button
+                      className="admin__button"
+                      onClick={() => {
+                        makeAdmin(user.id);
+                      }}
+                    >
+                      <Icon.PersonFillGear />
+                    </button>
                     <button
                       className="admin__button"
                       onClick={() => {

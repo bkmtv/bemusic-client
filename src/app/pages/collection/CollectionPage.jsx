@@ -1,14 +1,15 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import { URI } from "@constants/api";
+import { UserContext } from "@context/UserContext";
 import axios from "axios";
 import * as Icon from "react-bootstrap-icons";
 import { FormattedMessage } from "react-intl";
 import { Link, useNavigate, useParams } from "react-router-dom";
-
 import "./Collection.css";
 
 export default function Collection() {
+  const { user } = useContext(UserContext);
   const { id } = useParams();
   const navigate = useNavigate();
   const [collectionObj, setCollectionObj] = useState({});
@@ -52,32 +53,34 @@ export default function Collection() {
       </button>
       <h4>{collectionObj.title}</h4>
       <p>{collectionObj.description}</p>
-      <div className="hstack">
-        <Link to={`/collection/${id}/additem`}>
-          <button className="btn btn-sm btn-outline-success my-3">
-            <Icon.PlusLg />
+      {(user.isAdmin || user.id === collectionObj.UserId) && (
+        <div className="hstack">
+          <Link to={`/collection/${id}/additem`}>
+            <button className="btn btn-sm btn-outline-success my-3">
+              <Icon.PlusLg />
+              &ensp;
+              <FormattedMessage id="app.profile.collection.addItem" />
+            </button>
+          </Link>
+          <Link to={`/collection/${id}/edit`}>
+            <button className="btn btn-sm btn-outline-primary my-3 mx-3">
+              <Icon.PencilFill />
+              &ensp;
+              <FormattedMessage id="app.profile.collection.editCol" />
+            </button>
+          </Link>
+          <button
+            className="btn btn-sm btn-outline-danger my-3 ms-auto"
+            onClick={() => {
+              deleteCollection(collectionObj.id);
+            }}
+          >
+            <Icon.Trash />
             &ensp;
-            <FormattedMessage id="app.profile.collection.addItem" />
+            <FormattedMessage id="app.profile.collection.delete" />
           </button>
-        </Link>
-        <Link to={`/collection/${id}/additem`}>
-          <button className="btn btn-sm btn-outline-primary my-3 mx-3">
-            <Icon.PencilFill />
-            &ensp;
-            <FormattedMessage id="app.profile.collection.editCol" />
-          </button>
-        </Link>
-        <button
-          className="btn btn-sm btn-outline-danger my-3 ms-auto"
-          onClick={() => {
-            deleteCollection(collectionObj.id);
-          }}
-        >
-          <Icon.Trash />
-          &ensp;
-          <FormattedMessage id="app.profile.collection.delete" />
-        </button>
-      </div>
+        </div>
+      )}
 
       <table className="table table-borderless col__table">
         <thead>
@@ -103,14 +106,16 @@ export default function Collection() {
               <td>Tags</td>
               <td>Field</td>
               <td>
-                <button
-                  className="col__button"
-                  onClick={() => {
-                    deleteItem(item.id);
-                  }}
-                >
-                  <Icon.Trash />
-                </button>
+                {(user.isAdmin || user.id === collectionObj.UserId) && (
+                  <button
+                    className="col__button"
+                    onClick={() => {
+                      deleteItem(item.id);
+                    }}
+                  >
+                    <Icon.Trash />
+                  </button>
+                )}
               </td>
             </tr>
           ))}

@@ -4,13 +4,14 @@ import { URI } from "@constants/api";
 import axios from "axios";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { FormattedMessage } from "react-intl";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { v4 } from "uuid";
 
 import "./Collection.css";
 import { storage } from "../../../firebase";
 
-const Form = () => {
+const EditCollection = () => {
+  const { id } = useParams();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     title: "",
@@ -56,7 +57,7 @@ const Form = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post(URI + "collection", formData, {
+      await axios.put(URI + "collection/" + id + "/edit", formData, {
         headers: { token: localStorage.getItem("token") },
       });
       navigate(-1);
@@ -69,7 +70,7 @@ const Form = () => {
   return (
     <div className="form m-auto col__form">
       <h4 className="mt-4 text-center">
-        <FormattedMessage id="app.profile.createclc" />
+        <FormattedMessage id="app.profile.editcol" />
       </h4>
       <form onSubmit={handleSubmit}>
         <label className="mt-3 mb-1">
@@ -140,4 +141,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default EditCollection;

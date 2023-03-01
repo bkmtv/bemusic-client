@@ -1,15 +1,18 @@
 import { useContext } from "react";
 
 import { URI } from "@constants/api";
+import { ThemeContext } from "@context/ThemeContext";
 import { UserContext } from "@context/UserContext";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { FormattedMessage } from "react-intl";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
 import "./Auth.css";
 
 export default function Signin() {
+  const { theme } = useContext(ThemeContext);
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
   const { setUser } = useContext(UserContext);
@@ -32,7 +35,7 @@ export default function Signin() {
 
   return (
     <main className="form-signin w-100 m-auto auth__main">
-      <form className="pt-5" onSubmit={handleSubmit(onSubmit)}>
+      <form className="pt-3" onSubmit={handleSubmit(onSubmit)}>
         <div className="h3 text-center">
           <FormattedMessage id="app.auth.sign-in" />
         </div>
@@ -54,6 +57,18 @@ export default function Signin() {
         <button className="w-100 btn btn-primary my-3" type="submit">
           <FormattedMessage id="app.auth.sign-in.btn" />
         </button>
+        <ToastContainer
+          position="bottom-center"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme={theme}
+        />
       </form>
     </main>
   );

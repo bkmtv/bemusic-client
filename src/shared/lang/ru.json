@@ -40,5 +40,9 @@
   "app.profile.collection.editCol": "Редактировать коллекцию",
   "app.back": "Назад",
   "app.profile.collection.delete": "Удалить коллекцию",
-  "app.profile.collection.itemName": "Название"
+  "app.profile.collection.itemName": "Название",
+  "app.item.comment": "Написать комментарий",
+  "app.profile.editcol": "Редактировать коллекцию",
+  "app.alert.signin": "Войдите в аккаунт",
+  "app.alert.sign-up.ok": "Регистрация прошла успешно"
 }

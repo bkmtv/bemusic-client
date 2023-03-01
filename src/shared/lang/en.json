@@ -40,5 +40,9 @@
   "app.profile.collection.editCol": "Edit collection",
   "app.back": "Back",
   "app.profile.collection.delete": "Delete collection",
-  "app.profile.collection.itemName": "Name"
+  "app.profile.collection.itemName": "Name",
+  "app.item.comment": "Leave a comment",
+  "app.profile.editcol": "Edit collection",
+  "app.alert.signin": "Please sign in",
+  "app.alert.sign-up.ok": "Registration completed successfully"
 }

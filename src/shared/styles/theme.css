@@ -1,11 +1,11 @@
-.light-theme {
+.light {
   --primary-color: #000;
   --secondary-color: #5e5e5e;
   --primary-bg: #F4F4F4;
   --secondary-bg: #fff;
 }
 
-.dark-theme {
+.dark {
   --primary-color: #FFF;
   --secondary-color: #727374;
   --primary-bg: #1C1C1C;

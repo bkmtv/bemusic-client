@@ -4,13 +4,14 @@ import { URI } from "@constants/api";
 import axios from "axios";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { FormattedMessage } from "react-intl";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { v4 } from "uuid";
 
 import "./Collection.css";
 import { storage } from "../../../firebase";
 
 const Form = () => {
+  const { id } = useParams();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     title: "",
@@ -56,7 +57,7 @@ const Form = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post(URI + "collection", formData, {
+      await axios.post(URI + "/profile/" + id + "/createcollection", formData, {
         headers: { token: localStorage.getItem("token") },
       });
       navigate(-1);

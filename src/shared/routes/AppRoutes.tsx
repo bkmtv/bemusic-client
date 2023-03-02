@@ -21,7 +21,10 @@ export default function AppRoutes() {
       <Route path={"/signup"} element={<Signup />} />
       <Route path={"/profile/:id"} element={<Profile />} />
       <Route path={"/profile/admin"} element={<UsersList />} />
-      <Route path={"/createcollection"} element={<CreateCollection />} />
+      <Route
+        path={"/profile/:id/createcollection"}
+        element={<CreateCollection />}
+      />
       <Route path={"/collection/:id"} element={<CollectionPage />} />
       <Route path={"/collection/:id/edit"} element={<EditCollection />} />
       <Route path={"/collection/:id/additem"} element={<AddItem />} />

@@ -39,8 +39,8 @@ export default function Profile() {
           <></>
         )}
       </div>
-      {user.id === userObject.id && (
-        <Link to={"/createcollection"}>
+      {user.isAdmin && user.id === userObject.id && (
+        <Link to={`/profile/${userObject.id}/createcollection`}>
           <button className="btn btn-sm btn-success my-3">
             <Icon.FolderPlus />
             &ensp;

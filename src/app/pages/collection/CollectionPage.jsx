@@ -124,7 +124,7 @@ export default function Collection() {
           <tbody>
             {listOfItems.map((item, key) => (
               <tr key={key}>
-                <th scope="row">{item.id}</th>
+                <th scope="row small text-muted">{item.id}</th>
                 <td>
                   <Link to={`/item/${item.id}`}>{item.name}</Link>
                 </td>

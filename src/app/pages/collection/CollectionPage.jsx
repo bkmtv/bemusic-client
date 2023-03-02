@@ -103,7 +103,7 @@ export default function Collection() {
         <table className="table table-borderless col__table">
           <thead>
             <tr>
-              <th scope="col">ID</th>
+              <th scope="col small text-muted">ID</th>
               <th scope="col">
                 <FormattedMessage id="app.profile.collection.itemName" />
               </th>

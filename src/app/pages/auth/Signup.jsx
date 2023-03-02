@@ -38,6 +38,7 @@ export default function Signup() {
           <FormattedMessage id="app.auth.sign-in.password" />
         </label>
         <input
+          type="password"
           {...register("password", { required: true, maxLength: 15 })}
           className="form-control"
         ></input>

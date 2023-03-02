@@ -50,69 +50,71 @@ export default function UsersList() {
             &emsp;
             <FormattedMessage id="app.user.users" />
           </h5>
-          <table className="table table-borderless admin__table">
-            <thead>
-              <tr>
-                <th scope="col">ID</th>
-                <th scope="col">
-                  <FormattedMessage id="app.user.users.name" />
-                </th>
-                <th scope="col">
-                  <FormattedMessage id="app.user.users.regdate" />
-                </th>
-                <th scope="col">
-                  <FormattedMessage id="app.user.users.role" />
-                </th>
-                <th scope="col">
-                  <FormattedMessage id="app.user.users.action" />
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {users.map((user, key) => (
-                <tr key={key}>
-                  <th scope="row">{user.id}</th>
-                  <td>
-                    <Link to={`/profile/${user.id}`}>{user.username}</Link>
-                  </td>
-                  <td>{user.regDate}</td>
-                  <td>
-                    {user.isAdmin ? (
-                      <FormattedMessage id="app.user.users.admin" />
-                    ) : (
-                      <FormattedMessage id="app.user.users.user" />
-                    )}
-                  </td>
-                  <td>
-                    <button
-                      className="admin__button"
-                      onClick={() => {
-                        makeUser(user.id);
-                      }}
-                    >
-                      <Icon.PersonFill />
-                    </button>
-                    <button
-                      className="admin__button"
-                      onClick={() => {
-                        makeAdmin(user.id);
-                      }}
-                    >
-                      <Icon.PersonFillGear />
-                    </button>
-                    <button
-                      className="admin__button"
-                      onClick={() => {
-                        deleteUser(user.id);
-                      }}
-                    >
-                      <Icon.Trash />
-                    </button>
-                  </td>
+          <div className="table-responsive">
+            <table className="table table-borderless admin__table">
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">
+                    <FormattedMessage id="app.user.users.name" />
+                  </th>
+                  <th scope="col">
+                    <FormattedMessage id="app.user.users.regdate" />
+                  </th>
+                  <th scope="col">
+                    <FormattedMessage id="app.user.users.role" />
+                  </th>
+                  <th scope="col">
+                    <FormattedMessage id="app.user.users.action" />
+                  </th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {users.map((user, key) => (
+                  <tr key={key}>
+                    <th scope="row">{user.id}</th>
+                    <td>
+                      <Link to={`/profile/${user.id}`}>{user.username}</Link>
+                    </td>
+                    <td>{user.regDate}</td>
+                    <td>
+                      {user.isAdmin ? (
+                        <FormattedMessage id="app.user.users.admin" />
+                      ) : (
+                        <FormattedMessage id="app.user.users.user" />
+                      )}
+                    </td>
+                    <td>
+                      <button
+                        className="admin__button"
+                        onClick={() => {
+                          makeUser(user.id);
+                        }}
+                      >
+                        <Icon.PersonFill />
+                      </button>
+                      <button
+                        className="admin__button"
+                        onClick={() => {
+                          makeAdmin(user.id);
+                        }}
+                      >
+                        <Icon.PersonFillGear />
+                      </button>
+                      <button
+                        className="admin__button"
+                        onClick={() => {
+                          deleteUser(user.id);
+                        }}
+                      >
+                        <Icon.Trash />
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </>
       ) : (
         <>

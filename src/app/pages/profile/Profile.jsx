@@ -29,7 +29,7 @@ export default function Profile() {
 
   return (
     <>
-      <div className="h5 pt-4 hstack">
+      <div className="h5 py-4 hstack">
         <FormattedMessage id="app.user.hello" /> {userObject.username}
         {user.isAdmin ? (
           <Link to={"/profile/admin"} className="ms-auto profile__admin">
@@ -39,13 +39,15 @@ export default function Profile() {
           <></>
         )}
       </div>
-      <Link to={"/createcollection"}>
-        <button className="btn btn-sm btn-success my-3">
-          <Icon.FolderPlus />
-          &ensp;
-          <FormattedMessage id="app.profile.createbtn" />
-        </button>
-      </Link>
+      {user.id === userObject.id && (
+        <Link to={"/createcollection"}>
+          <button className="btn btn-sm btn-success my-3">
+            <Icon.FolderPlus />
+            &ensp;
+            <FormattedMessage id="app.profile.createbtn" />
+          </button>
+        </Link>
+      )}
       <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
         {userCollections.map((collection, key) => (
           <div className="col" key={key}>

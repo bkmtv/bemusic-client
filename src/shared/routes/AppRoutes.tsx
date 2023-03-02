@@ -8,6 +8,7 @@ import CreateCollection from "../../app/pages/collection/CreateCollection";
 import EditCollection from "../../app/pages/collection/EditCollection";
 import Home from "../../app/pages/home/Home";
 import AddItem from "../../app/pages/item/AddItem";
+import EditItem from "../../app/pages/item/EditItem";
 import ItemPage from "../../app/pages/item/ItemPage";
 import Profile from "../../app/pages/profile/Profile";
 
@@ -25,6 +26,7 @@ export default function AppRoutes() {
       <Route path={"/collection/:id/edit"} element={<EditCollection />} />
       <Route path={"/collection/:id/additem"} element={<AddItem />} />
       <Route path={"/item/:id"} element={<ItemPage />} />
+      <Route path={"/item/:id/edit"} element={<EditItem />} />
     </Routes>
   );
 }

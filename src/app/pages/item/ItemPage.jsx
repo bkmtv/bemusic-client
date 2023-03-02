@@ -5,7 +5,7 @@ import { ThemeContext } from "@context/ThemeContext";
 import axios from "axios";
 import * as Icon from "react-bootstrap-icons";
 import { FormattedMessage } from "react-intl";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "./Item.css";
 
@@ -43,6 +43,7 @@ export default function ItemPage() {
         const commentToAdd = {
           commentBody: newComment,
           username: response.data.username,
+          UserId: response.data.UserId,
         };
         setComments([...comments, commentToAdd]);
         setNewComment("");
@@ -79,20 +80,35 @@ export default function ItemPage() {
         }}
         className="btn btn-sm btn-outline-secondary mb-3"
       >
-        <Icon.ArrowLeftSquare />
-        &ensp;
-        <FormattedMessage id="app.back" />
+        <div className="back">
+          <Icon.ArrowLeftSquare />
+          &ensp;
+          <FormattedMessage id="app.back" />
+        </div>
+      </button>
+      <button
+        onClick={() => {
+          navigate(`/collection/${itemObj.CollectionId}`);
+        }}
+        className="btn btn-sm btn-outline-secondary mb-3 mx-2"
+      >
+        <div className="back">
+          <FormattedMessage id="app.btn.tocollection" />
+          &ensp;
+          <Icon.ArrowRightSquare />
+        </div>
       </button>
 
       <h3>{itemObj.name} </h3>
-      <Icon.StarFill
-        className="item__like"
-        onClick={() => likeItem(itemObj.id)}
-      />
-      <label className="item__counter">
-        {Array.isArray(itemObj.Likes) ? itemObj.Likes.length : 0}
-      </label>
-      <br />
+      <div className="like">
+        <Icon.StarFill
+          className="item__like"
+          onClick={() => likeItem(itemObj.id)}
+        />
+        <label className="item__counter">
+          {Array.isArray(itemObj.Likes) ? itemObj.Likes.length : 0}
+        </label>
+      </div>
 
       <label className="mt-3 mb-1">
         <FormattedMessage id="app.item.comment" />
@@ -129,8 +145,11 @@ export default function ItemPage() {
             <div className="card my-2 item__comment" key={key}>
               <div className="card-body">
                 {comment.commentBody}
-                <div className="card-link text-muted mt-2">
-                  <Icon.Person /> {comment.username}
+                <div className="card-link text-muted mt-2 small">
+                  <Icon.Person />
+                  <Link to={`/profile/${comment.UserId}`}>
+                    {comment.username}
+                  </Link>
                 </div>
               </div>
             </div>

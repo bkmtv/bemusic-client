@@ -7,6 +7,17 @@
     background: var(--secondary-bg) !important;
 }
 
+.item__comment a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+.card-link {
+    display: flex;
+    align-items: center;
+}
+
 .item__like {
     margin-right: 7px;
     cursor: pointer;
@@ -15,4 +26,10 @@
 .item__counter {
     font-size: 14px;
     font-weight: 500;
+}
+
+.like {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
 }

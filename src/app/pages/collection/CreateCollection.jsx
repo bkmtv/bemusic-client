@@ -57,7 +57,7 @@ const Form = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post(URI + "/profile/" + id + "/createcollection", formData, {
+      await axios.post(URI + "profile/" + id + "/createcollection", formData, {
         headers: { token: localStorage.getItem("token") },
       });
       navigate(-1);

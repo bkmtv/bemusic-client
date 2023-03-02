@@ -58,15 +58,6 @@ export default function AddItem() {
             onChange={handleChange}
             className="form-control"
           />
-          <label className="mt-3 mb-1">Tags</label>
-          <input
-            type="text"
-            name="tags"
-            maxLength="25"
-            value={formData.tags}
-            onChange={handleChange}
-            className="form-control"
-          />
           <button className="btn btn-primary mt-4 w-100" type="submit">
             <FormattedMessage id="app.auth.sign-up.btn" />
           </button>

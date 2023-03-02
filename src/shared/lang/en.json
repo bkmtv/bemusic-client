@@ -37,6 +37,8 @@
   "app.profile.createclc.things": "Things",
   "app.profile.collection.title": "Collection",
   "app.profile.collection.addItem": "Add new item",
+  "app.profile.collection.tags": "Tags",
+  "app.profile.collection.field": "Field",
   "app.profile.collection.editCol": "Edit collection",
   "app.back": "Back",
   "app.profile.collection.delete": "Delete collection",

@@ -36,6 +36,8 @@
   "app.profile.createclc.people": "Люди",
   "app.profile.createclc.things": "Вещи",
   "app.profile.collection.title": "Коллекция",
+  "app.profile.collection.tags": "Теги",
+  "app.profile.collection.field": "Поле",
   "app.profile.collection.addItem": "Добавить новую запись",
   "app.profile.collection.editCol": "Редактировать коллекцию",
   "app.back": "Назад",

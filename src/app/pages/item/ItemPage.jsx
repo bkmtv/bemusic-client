@@ -85,8 +85,6 @@ export default function ItemPage() {
       </button>
 
       <h3>{itemObj.name} </h3>
-      <p>Tags</p>
-
       <Icon.StarFill
         className="item__like"
         onClick={() => likeItem(itemObj.id)}

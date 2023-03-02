@@ -89,8 +89,18 @@ export default function Collection() {
             <th scope="col">
               <FormattedMessage id="app.profile.collection.itemName" />
             </th>
-            <th scope="col">Tags</th>
-            <th scope="col">Custom field</th>
+            <th scope="col">
+              <FormattedMessage id="app.profile.collection.tags" />
+            </th>
+            <th scope="col">
+              <FormattedMessage id="app.profile.collection.field" />
+            </th>
+            <th scope="col">
+              <FormattedMessage id="app.profile.collection.field" />
+            </th>
+            <th scope="col">
+              <FormattedMessage id="app.profile.collection.field" />
+            </th>
             <th scope="col">
               <FormattedMessage id="app.user.users.action" />
             </th>
@@ -103,8 +113,10 @@ export default function Collection() {
               <td>
                 <Link to={`/item/${item.id}`}>{item.name}</Link>
               </td>
-              <td>Tags</td>
-              <td>Field</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
               <td>
                 {(user.isAdmin || user.id === collectionObj.UserId) && (
                   <button

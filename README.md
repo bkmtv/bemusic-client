@@ -1,12 +1,10 @@
 # Collections
-
 Web application for storing collections.
 
 ## Stack
-
 NodeJS, Express, React, MySQL.
-
 Sequelize, Bootstrap, Axios.
 
-<img width="1440" alt="Screen Shot 2023-03-06 at 01 23 32" src="https://user-images.githubusercontent.com/42896701/222986864-756c7b4e-ec83-402e-bfc0-8cba13ae936b.png">
-<img width="1440" alt="Screen Shot 2023-03-06 at 01 24 04" src="https://user-images.githubusercontent.com/42896701/222986874-66ab4c85-89f9-4660-b7b0-453118746921.png">
+![screencapture-collections-ibkmt-vercel-app-2023-03-06-15_31_17](https://user-images.githubusercontent.com/42896701/223098917-4493f2ff-6afa-42e1-9c26-ecb84e3b1b83.png)
+![screencapture-collections-ibkmt-vercel-app-2023-03-06-15_32_01](https://user-images.githubusercontent.com/42896701/223098938-07d90eb3-8b44-4164-a8c0-b9a852d0656d.png)
+![screencapture-collections-ibkmt-vercel-app-profile-44-2023-03-06-15_32_29](https://user-images.githubusercontent.com/42896701/223098950-84e8efe3-57d2-4f13-aafd-cb230fd8ecc7.png)

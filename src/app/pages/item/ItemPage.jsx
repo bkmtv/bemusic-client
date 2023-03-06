@@ -115,7 +115,7 @@ export default function ItemPage() {
         </div>
       </button>
 
-      <h3>{itemObj.name} </h3>
+      <h3>{itemObj.name}</h3>
       <div className="like">
         <Icon.StarFill
           className="item__like"

@@ -20,8 +20,11 @@ function Header() {
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid p-0">
         <Link to={"/"}>
-          <div className="header__logo">
-            <Icon.Collection /> <FormattedMessage id="app.header.logo" />
+          <div className="header__logo header__flex">
+            <Icon.Collection />
+            <span className="mx-2">
+              <FormattedMessage id="app.header.logo" />
+            </span>
           </div>
         </Link>
         <button

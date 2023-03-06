@@ -15,6 +15,11 @@ nav a:hover {
   margin: 0 30px 5px 0;
 }
 
+.header__flex {
+  display: flex;
+  align-items: center;
+}
+
 .header__icon {
   color: var(--primary-color);
   font-size: 26px;

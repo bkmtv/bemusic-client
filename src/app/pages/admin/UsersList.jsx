@@ -76,7 +76,12 @@ export default function UsersList() {
                     <td>
                       <Link to={`/profile/${user.id}`}>{user.username}</Link>
                     </td>
-                    <td>{user.regDate}</td>
+                    <td>
+                      {new Date(user.regDate).toLocaleDateString("ru-RU", {
+                        hour: "numeric",
+                        minute: "numeric",
+                      })}
+                    </td>
                     <td>
                       {user.isAdmin ? (
                         <FormattedMessage id="app.user.users.admin" />
@@ -107,7 +112,7 @@ export default function UsersList() {
                           deleteUser(user.id);
                         }}
                       >
-                        <Icon.Trash />
+                        <Icon.XSquare />
                       </button>
                     </td>
                   </tr>

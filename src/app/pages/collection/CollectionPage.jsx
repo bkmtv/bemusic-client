@@ -103,18 +103,9 @@ export default function Collection() {
         <table className="table table-borderless col__table">
           <thead>
             <tr>
-              <th scope="col small text-muted">ID</th>
+              <th scope="col">ID</th>
               <th scope="col">
                 <FormattedMessage id="app.profile.collection.itemName" />
-              </th>
-              <th scope="col">
-                <FormattedMessage id="app.profile.collection.tags" />
-              </th>
-              <th scope="col">
-                <FormattedMessage id="app.profile.collection.field" />
-              </th>
-              <th scope="col">
-                <FormattedMessage id="app.profile.collection.field" />
               </th>
               <th scope="col">
                 <FormattedMessage id="app.user.users.action" />
@@ -124,13 +115,12 @@ export default function Collection() {
           <tbody>
             {listOfItems.map((item, key) => (
               <tr key={key}>
-                <th scope="row small text-muted">{item.id}</th>
+                <th scope="row">
+                  <span className="small text-muted">{item.id}</span>
+                </th>
                 <td>
                   <Link to={`/item/${item.id}`}>{item.name}</Link>
                 </td>
-                <td></td>
-                <td></td>
-                <td></td>
                 <td>
                   {(user.isAdmin || user.id === collectionObj.UserId) && (
                     <>

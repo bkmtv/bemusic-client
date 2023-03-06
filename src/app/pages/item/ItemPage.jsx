@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 
 import { URI } from "@constants/api";
 import { ThemeContext } from "@context/ThemeContext";
+import { UserContext } from "@context/UserContext";
 import axios from "axios";
 import * as Icon from "react-bootstrap-icons";
 import { FormattedMessage } from "react-intl";
@@ -11,6 +12,7 @@ import "./Item.css";
 
 export default function ItemPage() {
   const { id } = useParams();
+  const { user } = useContext(UserContext);
   const { theme } = useContext(ThemeContext);
   const navigate = useNavigate();
   const [itemObj, setItemObj] = useState({});
@@ -47,6 +49,20 @@ export default function ItemPage() {
         };
         setComments([...comments, commentToAdd]);
         setNewComment("");
+      });
+  };
+
+  const deleteComment = (id) => {
+    axios
+      .delete(URI + "comment/" + id, {
+        headers: { token: localStorage.getItem("token") },
+      })
+      .then(() => {
+        setComments(
+          comments.filter((val) => {
+            return val.id !== id;
+          })
+        );
       });
   };
 
@@ -144,13 +160,29 @@ export default function ItemPage() {
           return (
             <div className="card my-2 item__comment" key={key}>
               <div className="card-body">
-                {comment.commentBody}
-                <div className="card-link text-muted mt-2 small">
-                  <Icon.Person />
+                <div className="card-link small text-muted mb-2">
+                  <Icon.FilePerson />
                   <Link to={`/profile/${comment.UserId}`}>
-                    {comment.username}
+                    <strong>{comment.username}</strong>
                   </Link>
+                  <div className="mx-2">
+                    {new Date(comment.createdAt).toLocaleDateString("ru-RU", {
+                      hour: "numeric",
+                      minute: "numeric",
+                    })}
+                  </div>
+                  {(user.isAdmin || user.id === comment.UserId) && (
+                    <button
+                      className="comment__btn ms-auto"
+                      onClick={() => {
+                        deleteComment(comment.id);
+                      }}
+                    >
+                      <Icon.XSquare />
+                    </button>
+                  )}
                 </div>
+                {comment.commentBody}
               </div>
             </div>
           );

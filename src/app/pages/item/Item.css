@@ -13,6 +13,13 @@
     margin-left: 4px;
 }
 
+.comment__btn {
+    color: var(--text-primary);
+    border: none;
+    background: none;
+    text-decoration: none;
+}
+
 .card-link {
     display: flex;
     align-items: center;

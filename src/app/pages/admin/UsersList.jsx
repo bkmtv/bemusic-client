@@ -72,16 +72,13 @@ export default function UsersList() {
               <tbody>
                 {users.map((user, key) => (
                   <tr key={key}>
-                    <th scope="row">{user.id}</th>
+                    <th scope="row">
+                      <span className="small text-muted">{user.id}</span>
+                    </th>
                     <td>
                       <Link to={`/profile/${user.id}`}>{user.username}</Link>
                     </td>
-                    <td>
-                      {new Date(user.regDate).toLocaleDateString("ru-RU", {
-                        hour: "numeric",
-                        minute: "numeric",
-                      })}
-                    </td>
+                    <td>{user.regDate}</td>
                     <td>
                       {user.isAdmin ? (
                         <FormattedMessage id="app.user.users.admin" />

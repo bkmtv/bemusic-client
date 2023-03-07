@@ -46,6 +46,7 @@ export default function ItemPage() {
           commentBody: newComment,
           username: response.data.username,
           UserId: response.data.UserId,
+          createdAt: new Date(),
         };
         setComments([...comments, commentToAdd]);
         setNewComment("");
